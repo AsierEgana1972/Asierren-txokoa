@@ -104,6 +104,207 @@
         <section id="portfolio" class="py-4" aria-labelledby="titulo-portofolio">
             <h2 id="titulo-portofolio">Portfolio</h2>
 
+            <div class="container py-5">
+                <ul class="nav nav-pills justify-content-center mb-4" id="portfolioTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active px-4 py-2" id="ux-tab" data-bs-toggle="tab" data-bs-target="#ux-content" type="button" role="tab">UX-UI Diseinua</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link px-4 py-2" id="corp-tab" data-bs-toggle="tab" data-bs-target="#corp-content" type="button" role="tab">Irudi Korporatiboa</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link px-4 py-2" id="illus-tab" data-bs-toggle="tab" data-bs-target="#illus-content" type="button" role="tab">Ilustrazioa</button>
+                    </li>
+                </ul>
+
+                <!-- 2. ERLEITZEN EDUKIA (TAB PANES) -->
+                <div class="tab-content" id="portfolioTabsContent">
+
+                     <!-- === UX-UI ATALA === -->
+                    <div class="tab-pane fade show active" id="ux-content" role="tabpanel">
+                        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                            <!-- Txartela 1 -->
+                            <div class="col">
+                            <div class="card h-100 shadow-sm portfolio-card" data-bs-toggle="modal" data-bs-target="#uxModal1">
+                                <img src="https://placeholder.com" class="card-img-top" alt="UX Proiektu Azala">
+                                <div class="card-body">
+                                <span class="badge bg-primary mb-2">Mugikor App</span>
+                                <h5 class="card-title fw-bold">E-Commerce UX Diseinua</h5>
+                                <p class="card-text text-muted text-truncate-2">Erabiltzailearen erosketa-fluxuaren azterketa eta prototipo interaktiboa.</p>
+                                </div>
+                            </div>
+                            </div>
+                            <!-- Txartel gehiago UX atalean hemen gehitu daitezke... -->
+                        </div>
+                    </div>
+                    
+                    <!-- === IRUDI KORPORATIBOA ATALA === -->
+                    <div class="tab-pane fade" id="corp-content" role="tabpanel">
+                        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                            <!-- Txartela 2 -->
+                            <div class="col">
+                            <div class="card h-100 shadow-sm portfolio-card" data-bs-toggle="modal" data-bs-target="#corpModal1">
+                                <img src="https://placeholder.com" class="card-img-top" alt="Korporatibo Azala">
+                                <div class="card-body">
+                                <span class="badge bg-success mb-2">Branding</span>
+                                <h5 class="card-title fw-bold">Kafetegi baten Marka</h5>
+                                <p class="card-text text-muted">Logotipo berria, kolore-paleta eta ontzien (packaging) diseinu osoa.</p>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     <!-- === ILUSTRAZIOA ATALA === -->
+                    <div class="tab-pane fade" id="illus-content" role="tabpanel">
+                        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                            <!-- Txartela 3 -->
+                            <div class="col">
+                            <div class="card h-100 shadow-sm portfolio-card" data-bs-toggle="modal" data-bs-target="#illusModal1">
+                                <img src="https://placeholder.com" class="card-img-top" alt="Ilustrazio Azala">
+                                <div class="card-body">
+                                <span class="badge bg-warning text-dark mb-2">Editorial</span>
+                                <h5 class="card-title fw-bold">Liburu baterako Azala</h5>
+                                <p class="card-text text-muted">Teknika digitala erabiliz egindako fantasia generoko ilustrazioa.</p>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ========================================== -->
+                    <!-- 3. MODAL LEIHOAK ETA KARRUSELAK            -->
+                    <!-- ========================================== -->
+
+                    <!-- UX Proiektuaren Modala -->
+                    <div class="modal fade" id="uxModal1" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                            <div class="modal-header border-0">
+                                <h5 class="modal-title fw-bold">E-Commerce UX Diseinua</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Itxi"></button>
+                            </div>
+                            <div class="modal-body p-0">
+                                <!-- KARRUSELA -->
+                                <div id="uxCarousel1" class="carousel slide" data-bs-ride="false">
+                                <!-- Karruselaren barruko irudiak -->
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                    <img src="https://placeholder.com" class="d-block w-full" alt="Amaierako diseinua">
+                                    </div>
+                                    <div class="carousel-item">
+                                    <img src="https://placeholder.com" class="d-block w-full" alt="Wireframes">
+                                    </div>
+                                    <div class="carousel-item">
+                                    <img src="https://placeholder.com" class="d-block w-full" alt="User flow map">
+                                    </div>
+                                </div>
+                                <!-- Nabigazio geziak -->
+                                <button class="carousel-control-prev" type="button" data-bs-target="#uxCarousel1" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Aurrekoa</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#uxCarousel1" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Hurrengoa</span>
+                                </button>
+                                </div>
+                            </div>
+                            <div class="p-4 bg-light">
+                                <p class="mb-0 text-muted"><strong>Proiekturen azalpena:</strong> Hemen proiektu honen helburuak eta prozesuak kontatu ditzakezu karruselaren irudiekin batera.</p>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Irudi korporatiboaren Modala -->
+                    <div class="modal fade" id="uxModal2" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                            <div class="modal-header border-0">
+                                <h5 class="modal-title fw-bold">Irudi korporatiboa</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Itxi"></button>
+                            </div>
+                            <div class="modal-body p-0">
+                                <!-- KARRUSELA -->
+                                <div id="uxCarousel1" class="carousel slide" data-bs-ride="false">
+                                <!-- Karruselaren barruko irudiak -->
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                    <img src="https://placeholder.com" class="d-block w-full" alt="Amaierako diseinua">
+                                    </div>
+                                    <div class="carousel-item">
+                                    <img src="https://placeholder.com" class="d-block w-full" alt="Wireframes">
+                                    </div>
+                                    <div class="carousel-item">
+                                    <img src="https://placeholder.com" class="d-block w-full" alt="User flow map">
+                                    </div>
+                                </div>
+                                <!-- Nabigazio geziak -->
+                                <button class="carousel-control-prev" type="button" data-bs-target="#uxCarousel1" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Aurrekoa</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#uxCarousel1" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Hurrengoa</span>
+                                </button>
+                                </div>
+                            </div>
+                            <div class="p-4 bg-light">
+                                <p class="mb-0 text-muted"><strong>Proiekturen azalpena:</strong> Hemen proiektu honen helburuak eta prozesuak kontatu ditzakezu karruselaren irudiekin batera.</p>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ilustrazioien Modala -->
+                    <div class="modal fade" id="uxModal32" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                            <div class="modal-header border-0">
+                                <h5 class="modal-title fw-bold">Irudi korporatiboa</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Itxi"></button>
+                            </div>
+                            <div class="modal-body p-0">
+                                <!-- KARRUSELA -->
+                                <div id="uxCarousel1" class="carousel slide" data-bs-ride="false">
+                                <!-- Karruselaren barruko irudiak -->
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                    <img src="https://placeholder.com" class="d-block w-full" alt="Amaierako diseinua">
+                                    </div>
+                                    <div class="carousel-item">
+                                    <img src="https://placeholder.com" class="d-block w-full" alt="Wireframes">
+                                    </div>
+                                    <div class="carousel-item">
+                                    <img src="https://placeholder.com" class="d-block w-full" alt="User flow map">
+                                    </div>
+                                </div>
+                                <!-- Nabigazio geziak -->
+                                <button class="carousel-control-prev" type="button" data-bs-target="#uxCarousel1" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Aurrekoa</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#uxCarousel1" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Hurrengoa</span>
+                                </button>
+                                </div>
+                            </div>
+                            <div class="p-4 bg-light">
+                                <p class="mb-0 text-muted"><strong>Proiekturen azalpena:</strong> Hemen proiektu honen helburuak eta prozesuak kontatu ditzakezu karruselaren irudiekin batera.</p>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+            
+            
             <div class="card mb-3 border-0 shadow-sm">
                 <div class="card-body">
                     <h3 class="h5 card-title fw-bold text-primary">UX-UI</h3>
