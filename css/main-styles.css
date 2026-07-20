@@ -3,6 +3,7 @@
 
     /*propioak*/
     --primary-bg:#1D9B65;
+    --primary-color:#FFF;
 }
 
 .accordion-item{
@@ -11,4 +12,8 @@
 
 .accordion{
     --bs-accordion-bg:var(--primary-bg)!important;
+}
+
+.accordion-button{
+    color:var(--primary-color)!important;
 }
