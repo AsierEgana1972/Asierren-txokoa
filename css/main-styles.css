@@ -8,3 +8,7 @@
 .accordion-item{
     background-color:var(--primary-bg)!important;
 }
+
+.accordion{
+    --bs-accordion-bg:var(--primary-bg)!important;
+}
