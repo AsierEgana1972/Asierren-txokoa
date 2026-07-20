@@ -125,7 +125,18 @@
             <h2 id="titulo-portofolio">Portfolio</h2>
 
             <div class="container py-5">
-                <ul class="nav nav-pills justify-content-center mb-4" id="portfolioTabs" role="tablist">
+
+                <!-- Select responsive -->
+                <div class="d-block d-md-none mb-3">
+                    <label for="tabSelectMobile" class="visually-hidden">Hautatu erlaitz bat</label>
+                    <select id="tabSelectMobile" class="form-select form-select-lg">
+                    <option value="#ux-content">UX-UI Diseinua</option>
+                    <option value="#corp-content">Irdudi Korporatiboa</option>
+                    <option value="#illus-content">Ilustrazioak</option>
+                    </select>
+                </div>
+
+                <ul class="nav nav-pills justify-content-center mb-4 d-none d-md-flex" id="portfolioTabs" role="tablist">
                     <li class="nav-item" role="presentation">
                         <button class="nav-link active px-4 py-2" id="ux-tab" data-bs-toggle="tab" data-bs-target="#ux-content" type="button" role="tab">UX-UI Diseinua</button>
                     </li>
