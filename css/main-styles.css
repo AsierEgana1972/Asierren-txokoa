@@ -1,5 +1,5 @@
 :root {
     --bs-heading-color: #1D9B65;
     --bs-accordion-btn-color:#FFF;
-    --bs-accordion-bg:#1D9B65;
+    --bs-accordion-bg:#1D9B65!important;
 }
