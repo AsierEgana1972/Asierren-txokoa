@@ -8,15 +8,17 @@
 }
 
 .accordion-item{
-    background-color:var(--primary-bg)!important;
+    background-color:var(--primary-bg);
 }
 
 .accordion{
-    --bs-accordion-bg:var(--primary-bg)!important;
+    --bs-accordion-bg:var(--primary-bg);
 }
 
 .accordion-button{
-    color:var(--primary-color)!important;
+    color:var(--primary-color);
 }
 
-.accordion-body:var(--primary-hover-bg);
+.accordion-body{
+    background-color:var(--primary-hover-bg);
+}
