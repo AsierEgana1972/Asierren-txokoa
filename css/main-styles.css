@@ -6,5 +6,5 @@
 }
 
 .accordion-item{
-    background-color:var (--primary-bg)!important;
+    background-color:var(--primary-bg)!important;
 }
