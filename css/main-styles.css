@@ -22,3 +22,7 @@
 .accordion-body{
     background-color:var(--primary-hover-bg);
 }
+
+.carousel-item img{
+    width:100%;
+}
