@@ -1,5 +1,10 @@
 :root {
     --bs-heading-color: #1D9B65;
-    --bs-accordion-btn-color:#FFF;
-    --bs-accordion-bg:#1D9B65!important;
+
+    //propioak
+    --primary-bg:#1D9B65;
+}
+
+.accordion-item{
+    background-color:var (--primary-bg)!important;
 }
