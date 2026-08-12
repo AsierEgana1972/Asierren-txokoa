@@ -7,9 +7,13 @@
     --primary-hover-bg:#F4F9F6;
     --accordion-collapsed-bg:#efefef;
     --accordion-not-collapsed-bg:#15724a;
-    --accordion-collapsed-fg:#15724a;
+    --accordion-collapsed-fg:hsl(154, 69%, 26%);
     --accordion-not-collapsed-fg:#fff;
     --accordion-content-bg:#fcfcfc;
+
+    --bs-nav-pills-link-active-bg:var(--accordion-not-collapsed-bg);
+
+    --tab-link-fg:#15724a;
 
     --accordion-btn-size:1.2rem;
 
@@ -44,6 +48,10 @@
 
 .accordion-body{
     background-color:var(--accordion-content-bg);
+}
+
+.nav-link{
+    color:var(--tab-link-fg);
 }
 
 .carousel-item img{
