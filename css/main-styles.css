@@ -5,18 +5,28 @@
     --primary-bg:#1D9B65;
     --primary-color:#FFF;
     --primary-hover-bg:#F4F9F6;
+    --accordion-collapsed-bg:#f4fbf7;
+    --accordion-not-collapsed-bg:#15724a;
+    --accordion-collapsed-fg:var(--primary-bg);
+    --accordion-not-collapsed-fg:#fff;
 }
 
-.accordion-item{
+/*.accordion-item{
     background-color:var(--primary-bg);
-}
+}*/
 
 .accordion{
     --bs-accordion-bg:var(--primary-bg);
 }
 
 .accordion-button{
-    color:var(--primary-color);
+    color:var(--accordion-collapsed-fg);
+    background-color:var(--accordion-collapsed-bg);
+}
+
+.accordion-button:not(.collapsed){
+    color:var(--accordion-not-collapsed-fg);
+    background-color:var(--accordion-not-collapsed-bg);
 }
 
 .accordion-body{
@@ -25,4 +35,8 @@
 
 .carousel-item img{
     width:100%;
+}
+
+.sss{
+    background-image:;
 }
