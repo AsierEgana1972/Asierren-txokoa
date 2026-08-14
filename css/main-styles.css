@@ -11,7 +11,7 @@
     --accordion-not-collapsed-fg:#fff;
     --accordion-content-bg:#fcfcfc;
 
-    --bs-nav-pills-link-active-bg:var(--accordion-not-collapsed-bg);
+    --tab-active-bg:var(--accordion-not-collapsed-bg);
 
     --tab-link-fg:#15724a;
 
@@ -23,6 +23,8 @@
 /*.accordion-item{
     background-color:var(--primary-bg);
 }*/
+
+/*ACCODION*/
 
 .accordion-header{
     font-size:var(--accordion-btn-size);
@@ -50,14 +52,19 @@
     background-color:var(--accordion-content-bg);
 }
 
+
+/*TABS*/
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    background-color:var(--tab-active-bg);
+}
+
+/******/
+
 .nav-link{
     color:var(--tab-link-fg);
 }
 
 .carousel-item img{
     width:100%;
-}
-
-.sss{
-    background-image:;
 }
