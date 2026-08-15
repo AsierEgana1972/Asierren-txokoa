@@ -71,8 +71,8 @@
 
 .nav-link:focus, .nav-link:hover{
     border:solid 1px var(--tab-active-bg);
-    background-color:var(--primary-bg);
-    color:var(--tab-link-fg);
+    background-color:var(--tab-active-bg);
+    color:var(--primary-color);
 }
 
 
