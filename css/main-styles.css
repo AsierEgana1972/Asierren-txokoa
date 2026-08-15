@@ -66,6 +66,13 @@
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
     background-color:var(--tab-active-bg);
+    border:solid 1px var(--tab-active-bg);
+}
+
+.nav-link:focus, .nav-link:hover{
+    border:solid 1px var(--tab-active-bg);
+    background-color:var(--primary-bg);
+    color:var(--tab-link-fg);
 }
 
 
