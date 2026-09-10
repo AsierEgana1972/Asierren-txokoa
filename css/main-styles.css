@@ -97,3 +97,18 @@
 .carousel-item img{
     width:100%;
 }
+
+/******/
+/*ESPERIENTZIA*/
+
+.experiencia-left{
+    background-image: url(img/Esperientzia.png);
+    background-size: calc(100% - 20px);
+    background-repeat: no-repeat;
+    height: 30rem;
+    border: solid 1px #32a374;
+    border-radius: 10px;
+    background-position-x: center;
+    background-position-y: top;
+    background-color: #efefef;
+}
