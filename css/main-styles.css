@@ -103,7 +103,6 @@
 
 .experiencia-left{
     background-image: url(../img/Esperientzia.png);
-    background-size: calc(100% - 20px);
     background-repeat: no-repeat;
     border: solid 1px #32a374;
     border-radius: 10px;
@@ -112,22 +111,25 @@
     background-color: #efefef;
 }
 
-@media (min-width:1440px){
-    .experiencia-left{
-        height: 30rem;
-    }
-}
-
-
-
-@media (min-width:1024px){
-    .experiencia-left{
-        height: 21rem;
-    }
-}
 
 @media (min-width:768px){
     .experiencia-left{
         height: 16rem;
+        background-size: 14rem;
     }
 }
+
+@media (min-width:1024px){
+    .experiencia-left{
+        height: 21rem;
+        background-size: 19rem;
+    }
+}
+
+@media (min-width:1440px){
+    .experiencia-left{
+        height: 27rem;
+        background-size: 23rem;
+    }
+}
+
