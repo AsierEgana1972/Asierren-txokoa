@@ -105,7 +105,6 @@
     background-image: url(../img/Esperientzia.png);
     background-size: calc(100% - 20px);
     background-repeat: no-repeat;
-    height: 30rem;
     border: solid 1px #32a374;
     border-radius: 10px;
     background-position-x: center;
@@ -113,14 +112,22 @@
     background-color: #efefef;
 }
 
-@media (min-width:768px){
+@media (min-width:1440px){
     .experiencia-left{
-        height: 16rem;
+        height: 30rem;
     }
 }
+
+
 
 @media (min-width:1024px){
     .experiencia-left{
         height: 21rem;
+    }
+}
+
+@media (min-width:768px){
+    .experiencia-left{
+        height: 16rem;
     }
 }
