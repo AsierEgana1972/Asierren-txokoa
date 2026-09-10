@@ -112,3 +112,15 @@
     background-position-y: top;
     background-color: #efefef;
 }
+
+@media (min-width:768px){
+    .experiencia-left{
+        height: 16rem;
+    }
+}
+
+@media (min-width:1024px){
+    .experiencia-left{
+        height: 21rem;
+    }
+}
