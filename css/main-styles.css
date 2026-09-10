@@ -102,7 +102,7 @@
 /*ESPERIENTZIA*/
 
 .experiencia-left{
-    background-image: url(img/Esperientzia.png);
+    background-image: url(../img/Esperientzia.png);
     background-size: calc(100% - 20px);
     background-repeat: no-repeat;
     height: 30rem;
