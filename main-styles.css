@@ -1,0 +1,135 @@
+:root {
+    --bs-heading-color: #1D9B65;
+
+    /*propioak*/
+    --primary-bg:#1D9B65;
+    --primary-color:#FFF;
+    --primary-hover-bg:#F4F9F6;
+    --accordion-collapsed-bg:#efefef;
+    --accordion-not-collapsed-bg:#15724a;
+    --accordion-collapsed-fg:hsl(154, 69%, 26%);
+    --accordion-not-collapsed-fg:#fff;
+    --accordion-content-bg:#fcfcfc;
+
+    --tab-active-bg:var(--accordion-not-collapsed-bg);
+
+    --tab-link-fg:#15724a;
+
+    --tab-border-color:#d4d4d4;
+
+    --accordion-btn-size:1.2rem;
+
+    --accordion-btn-active-icon:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='rgb(255 255 255)' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+}
+
+/*.accordion-item{
+    background-color:var(--primary-bg);
+}*/
+
+/*ACCODION*/
+
+.accordion-header{
+    font-size:var(--accordion-btn-size);
+}
+
+.accordion{
+    --bs-accordion-bg:var(--primary-bg);
+}
+
+.accordion-button{
+    color:var(--accordion-collapsed-fg);
+    background-color:var(--accordion-collapsed-bg);
+}
+
+.accordion-button:not(.collapsed){
+    color:var(--accordion-not-collapsed-fg);
+    background-color:var(--accordion-not-collapsed-bg);
+}
+
+.accordion-button:not(.collapsed)::after{
+    background-image:var(--accordion-btn-active-icon);
+}
+
+.accordion-body{
+    background-color:var(--accordion-content-bg);
+}
+
+
+/*TABS*/
+
+.nav-pills{
+    column-gap:2px;
+    border-bottom: solid 1px var(--tab-active-bg);
+}
+
+.nav-pills .nav-link{
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-width: 1px;
+    border-style: solid;
+    border-bottom:none;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    background-color:var(--tab-active-bg);
+    border:solid 1px var(--tab-active-bg);
+    border-bottom:none;
+}
+
+.nav-link:focus, .nav-link:hover{
+    border:solid 1px var(--tab-active-bg);
+    background-color:var(--tab-active-bg);
+    color:var(--primary-color);
+    border-bottom:none;
+}
+
+
+.nav-link{
+    color:var(--tab-link-fg);
+}
+
+.tab-content>.active{
+    border:solid 1px var(--tab-border-color);
+}
+
+/****/
+
+.carousel-item img{
+    width:100%;
+}
+
+/******/
+/*ESPERIENTZIA*/
+
+.experiencia-left{
+    background-image: url(../img/Esperientzia.png);
+    background-repeat: no-repeat;
+    border: solid 1px #32a374;
+    border-radius: 10px;
+    background-position-x: center;
+    background-position-y: top;
+    background-color: #efefef;
+}
+
+@media (min-width:1440px){
+    .experiencia-left{
+        height: 27rem;
+        background-size: 23rem;
+    }
+}
+
+
+
+@media (min-width:1024px){
+    .experiencia-left{
+        height: 21rem;
+        background-size: 19rem;
+    }
+}
+
+@media (min-width:768px){
+    .experiencia-left{
+        height: 16rem;
+        background-size: 14rem;
+    }
+}
