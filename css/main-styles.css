@@ -99,10 +99,11 @@
 }
 
 /******/
-/*ESPERIENTZIA*/
+/*ESPERIENTZIA-PORTFOLIO*/
 
-.experiencia-left{
-    background-image: url(../img/Esperientzia.png);
+.experiencia-left,
+.portfolio-right{
+    
     background-repeat: no-repeat;
     border: solid 1px #32a374;
     border-radius: 10px;
@@ -110,6 +111,17 @@
     background-position-y: top;
     background-color: #efefef;
 }
+
+.experiencia-left{
+    background-image: url(../img/Esperientzia.png);
+}
+
+.portfolio-right{
+    background-image: url(../img/Esperientzia.png);
+}
+
+
+
 
 
 @media (min-width:768px){
