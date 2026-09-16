@@ -126,21 +126,24 @@
 
 
 @media (min-width:768px){
-    .experiencia-left{
+    .experiencia-left,
+    .portfolio-right{
         height: 16rem;
         background-size: 14rem;
     }
 }
 
 @media (min-width:1024px){
-    .experiencia-left{
+    .experiencia-left,
+    .portfolio-right{
         height: 22rem;
         background-size: 19rem;
     }
 }
 
 @media (min-width:1440px){
-    .experiencia-left{
+    .experiencia-left,
+    .portfolio-right{
         height: 27rem;
         background-size: 23rem;
     }
