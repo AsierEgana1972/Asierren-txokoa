@@ -105,11 +105,11 @@
 .portfolio-right{
     
     background-repeat: no-repeat;
-    border: solid 1px #32a374;
+    /*border: solid 1px #32a374;*/
     border-radius: 10px;
     background-position-x: center;
     background-position-y: top;
-    background-color: #efefef;
+    background-color: #32a374;
 }
 
 .experiencia-left{
