@@ -84,7 +84,7 @@
 }
 
 
-.tab-content> .nav-link{
+.nav-pills .nav-link{
     color:var(--tab-link-fg);
 }
 
