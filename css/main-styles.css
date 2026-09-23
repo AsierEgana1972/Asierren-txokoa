@@ -84,7 +84,7 @@
 }
 
 
-.nav-link{
+.tab-content> .nav-link{
     color:var(--tab-link-fg);
 }
 
