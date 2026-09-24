@@ -62,7 +62,7 @@
     border-bottom: solid 1px var(--tab-active-bg);
 }
 
-.nav-pills .nav-link{
+.nav-pills .nav-link[rolle="tabs"]{
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     border-width: 1px;
@@ -70,13 +70,13 @@
     border-bottom:none;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+.nav-pills .nav-link[rolle="tabs"].active, .nav-pills .show>.nav-link[rolle="tabs"]{
     background-color:var(--tab-active-bg);
     border:solid 1px var(--tab-active-bg);
     border-bottom:none;
 }
 
-.nav-link:focus, .nav-link:hover{
+.nav-link[rolle="tabs"]:focus, .nav-link[rolle="tabs"]:hover{
     border:solid 1px var(--tab-active-bg);
     background-color:var(--tab-active-bg);
     color:var(--primary-color);
@@ -84,7 +84,7 @@
 }
 
 
-.nav-pills .nav-link{
+.nav-pills .nav-link[rolle="tabs"]{
     color:var(--tab-link-fg);
 }
 
