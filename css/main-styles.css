@@ -44,7 +44,7 @@ h2{
 }
 
 .bg-dark.purple-dark{
-    background-color:var(--bg-dark);
+    background-color:var(--bg-dark)!important;
 }
 
 /*.accordion-item{
