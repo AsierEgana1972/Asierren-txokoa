@@ -39,7 +39,7 @@ h2{
     color:var(--h2-color);
 }
 
-.bg-dark{
+.bg-dark.purple-dark{
     background-color:var(--bg-dark);
 }
 
