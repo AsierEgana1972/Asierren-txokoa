@@ -6,6 +6,8 @@
     --primary-bg:#1D9B65;
     --primary-color:#FFF;
     --primary-hover-bg:#F4F9F6;
+    --tab-fg-color:#8b2881;
+
 
     --h1-color:#6f526c;
     --h2-color:#8b2881;
@@ -102,12 +104,15 @@ h2{
 .nav-link[role="tab"]:focus, .nav-link[role="tab"]:hover{
     border:solid 1px var(--tab-active-bg);
     background-color:var(--tab-active-bg);
-    color:var(--primary-color);
+    color:var(--tab-active-color);
     border-bottom:none;
 }
 
 
-.nav-pills .nav-link[role="tab"],
+.nav-pills .nav-link[role="tab"]{
+    color:var(--tab-fg-color);
+}
+
 .nav-pills .nav-link.active[role="tab"]{
     color:var(--tab-active-color);
 }
