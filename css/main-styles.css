@@ -1,19 +1,24 @@
 :root {
     --bs-heading-color: #1D9B65;
+    --bg-dark:#6f526c;/*Goiburu barra more iluna*/
 
     /*propioak*/
     --primary-bg:#1D9B65;
     --primary-color:#FFF;
     --primary-hover-bg:#F4F9F6;
+
+    --h1-color:#6f526c;
+    --h2-color:#8b2881;
+
     --accordion-collapsed-bg:#efefef;
-    --accordion-not-collapsed-bg:#15724a;
-    --accordion-collapsed-fg:hsl(154, 69%, 26%);
+    --accordion-not-collapsed-bg:#8b2881;
+    --accordion-collapsed-fg:#8b2881;
     --accordion-not-collapsed-fg:#fff;
     --accordion-content-bg:#fcfcfc;
 
     --tab-active-bg:var(--accordion-not-collapsed-bg);
 
-    --tab-link-fg:#15724a;
+    --tab-link-fg:#8b2881;
 
     --tab-border-color:#d4d4d4;
 
@@ -23,7 +28,15 @@
 }
 
 body{
-    background: color #f2f2f0;;
+    background-color: #f2f2f0;;
+}
+
+h1{
+    color:var(--h1-color);
+}
+
+h2{
+    color:var(--h2-color);
 }
 
 /*.accordion-item{
