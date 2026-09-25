@@ -47,10 +47,12 @@ h2{
     background-color:var(--bg-dark)!important;
 }
 
-
-/*.accordion-item{
-    background-color:var(--primary-bg);
-}*/
+header .nav-link.active,
+header .nav-link:hover,
+header .nav-link:focus{
+    border-bottom:solid 2px #fff;
+    color:var(--primary-color);
+}
 
 /*ACCODION*/
 
