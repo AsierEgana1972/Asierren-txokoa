@@ -12,13 +12,15 @@
     --h1-color:#5a0852;
     --h2-color:#8b2881;
 
-    --accordion-collapsed-bg:#efefef;
+    --accordion-collapsed-bg:#fadcf7;
     --accordion-not-collapsed-bg:#8b2881;
     --accordion-collapsed-fg:#8b2881;
     --accordion-not-collapsed-fg:#fff;
     --accordion-content-bg:#fcfcfc;
 
     --tab-active-bg:var(--accordion-not-collapsed-bg);
+
+    --tab-bg:#fadcf7;
 
     --tab-link-fg:#8b2881;
 
@@ -106,6 +108,7 @@ header .nav-link:focus{
 
 .nav-pills .nav-link[role="tab"]{
     color:var(--tab-fg-color);
+    background-color:var(--tab-bg);
 }
 
 .nav-link[role="tab"]:focus, .nav-link[role="tab"]:hover{
