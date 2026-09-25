@@ -50,8 +50,8 @@ h3{
 
 }
 
-h4{
-    color: rgb(90 8 82) !important;
+.h4.text-secondary{
+    color: #5a0852 !important;
     background-color: #f392d236;
     padding: .5rem;
     border-radius: 5px;
