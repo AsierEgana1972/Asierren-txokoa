@@ -161,6 +161,7 @@ h2{
 }
 
 @media (max-width:575px) {
+    header .collapsing ul.navbar-collapse,
     header ul.navbar-collapse {
         margin-left: -1rem !important;
         margin-right: -1rem !important;
@@ -168,6 +169,7 @@ h2{
 }
 
 @media (min-width:768px) {
+    header .collapsing ul.navbar-collapse,
     header ul.navbar-collapse {
         margin-left: -2rem !important;
         margin-right: -2rem !important;
