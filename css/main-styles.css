@@ -93,6 +93,10 @@ header .nav-link:focus{
     background-color:var(--accordion-not-collapsed-bg);
 }
 
+.accordion-button:hover::after {
+    background-image: var(--accordion-btn-active-icon);
+}
+
 .accordion-button:not(.collapsed)::after{
     background-image:var(--accordion-btn-active-icon);
 }
