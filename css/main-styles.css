@@ -155,8 +155,22 @@ h2{
     /*submenu nagusia*/
     header ul.navbar-collapse {
         background-color: #4b0044;
-        background: linear-gradient(1800deg,rgba(90, 8, 82, 1) 12%, rgba(75, 0, 68, 1) 100%);
+        background: linear-gradient(180deg,rgba(75, 0, 68, 1) 12%, rgba(90, 8, 82, 1) 100%);
         margin-top:1rem;
+    }
+}
+
+@media (max-width:575px) {
+    header ul.navbar-collapse {
+        margin-left: -1rem !important;
+        margin-right: -1rem !important;
+    }
+}
+
+@media (min-width:768px) {
+    header ul.navbar-collapse {
+        margin-left: -2rem !important;
+        margin-right: -2rem !important;
     }
 }
 
