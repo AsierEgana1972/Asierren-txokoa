@@ -49,6 +49,10 @@ h2{
     background-color:var(--bg-dark)!important;
 }
 
+header .nav-link{
+    border:solid 2px rgba(255,255,255,0);
+}
+
 header .nav-link.active,
 header .nav-link:hover,
 header .nav-link:focus{
@@ -71,7 +75,8 @@ header .nav-link:focus{
     background-color:var(--accordion-collapsed-bg);
 }
 
-.accordion-button:not(.collapsed){
+.accordion-button:not(.collapsed),
+.accordion-button:hover{
     color:var(--accordion-not-collapsed-fg);
     background-color:var(--accordion-not-collapsed-bg);
 }
