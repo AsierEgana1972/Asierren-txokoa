@@ -47,6 +47,12 @@ h2{
     background-color:var(--bg-dark)!important;
 }
 
+
+/*submenu nagusia*/
+    header ul.navbar-collapse {
+        background-color: #4b0044;
+    }
+
 /*.accordion-item{
     background-color:var(--primary-bg);
 }*/
@@ -160,14 +166,6 @@ h2{
         background-size: 11rem;
     }
 
-    /*submenu nagusia*/
-    header div.navbar-collapse {
-        background-color: #4b0044;
-        margin-left: -1.5rem !important;
-        margin-right: -1.5rem;
-        margin-bottom: -.5rem;
-        margin-top: .5rem;
-    }
 }
 
 @media (min-width:1024px){
