@@ -1,6 +1,6 @@
 :root {
     --bs-heading-color: #1D9B65;
-    --bg-dark:##65105d;/*Goiburu barra more iluna*/
+    --bg-dark:#5a0852;/*Goiburu barra more iluna*/
 
     /*propioak*/
     --primary-bg:#1D9B65;
@@ -9,7 +9,7 @@
     --tab-fg-color:#8b2881;
 
 
-    --h1-color:##65105d;
+    --h1-color:#5a0852;
     --h2-color:#8b2881;
 
     --accordion-collapsed-bg:#efefef;
