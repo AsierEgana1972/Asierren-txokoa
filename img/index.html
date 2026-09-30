@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asier Egaña | Diseñador UX/UI & Maquetador Front-End</title>
+    <meta name="description" content="Portfolio profesional de Asier Egaña: Especialista en Liferay DXP, maquetación Frontend y accesibilidad web WCAG.">
+    
+    <!-- Bootstrap 5 CSS (CDN) -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <!-- Zure estilo propioak (Bootstrap azpian beti, pertsonalizatzeko) -->
+    <link rel="stylesheet" href="css/main-styles.css">
+</head>
+<body>
+
+    <!-- Irisgarritasuna: Eduki nagusira zuzenean joateko esteka ezkutua pantaila-irakurleentzat -->
+    <a href="#main-content" class="visually-hidden-focusable p-2 bg-primary text-white position-absolute">Saltar al contenido principal</a>
+
+    <!-- Goiburua eta Nabigazio Barra -->
+    <header class="bg-dark purple-dark text-white">
+        <nav class="navbar navbar-expand-lg navbar-dark container" aria-label="Navegación principal">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold" href="#" title="Enlace a la página principal"><img src="img/logoAE.png" alt="Asier Egaña"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú de navegación">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-collapse navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#perfil">Perfil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#experiencia">Experiencia</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Eduki Nagusia -->
+    <main id="main-content" class="container my-5">
+        
+        <!-- Perfil Atala -->
+        <section id="perfil" class="py-4" aria-labelledby="titulo-perfil">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h1 id="titulo-perfil" class="display-4 fw-bold">Asier Egaña Aretxabaleta</h1>
+                    <p class="lead text-muted">Diseñador UX/UI | Maquetador Front-End | Especialista en Accesibilidad Web</p>
+                    <p>Diseñador UX/UI y Maquetador Front-End con más de 20 años de experiencia acumulada en la conceptualización, diseño y desarrollo de productos digitales. Especializado en entornos Liferay y experto en Accesibilidad Web (WCAG, Norma UNE-EN 301549). Perfil técnico-creativo con sólida base visual (Bellas Artes), capaz de asegurar la mejor experiencia de usuario garantizando el cumplimiento estricto de los estándares técnicos y de inclusión digital.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <!-- Zure argazkia jartzeko lekua -->
+                    <img src="img/Asier.jpg" alt="Fotografía profesional de Asier Egaña" class="img-fluid rounded-circle shadow" style="max-width: 200px;">
+                </div>
+            </div>
+        </section>
+
+        <hr class="my-5">
+
+        <!-- Esperientzia Atala -->
+        <section id="experiencia" class="py-4" aria-labelledby="titulo-experiencia">
+            <h2 id="titulo-experiencia" class="mb-4">Experiencia</h2>
+            
+            <div class="row experiencia-container">
+                <!-- <div class="d-none d-sm-block col-md-3 experiencia-left">
+                    
+                </div> -->
+                <div class="col experiencia-right"> <!-- col-xs-12 col-md-9 -->
+                    
+                    <div class="accordion" id="esperientziAkordeoia">
+                        
+                        <!-- 1. ATALA -->
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="buruaBat">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#atalaBat" aria-expanded="true" aria-controls="atalaBat">
+                                Experiencia Reciente
+                            </button>
+                            </h3>
+                            <!-- 'show' klaseak hasieratik zabalik mantentzen du -->
+                            <div id="atalaBat" class="accordion-collapse show" aria-labelledby="buruaBat" data-bs-parent="#esperientziAkordeoia">
+                            <div class="accordion-body">
+                                <h4 class="h4 card-title fw-bold text-secondary">Diseñador UX/UI y Maquetador Front-End (Liferay DXP 7.4)</h4>
+
+                                <p class="text-muted mb-2">SOLUZIO ONA | Mayo 2022 – Actualidad</p>
+
+                                <ul>
+                                    <li><strong>Diseño y Maquetación</strong>: Conceptualización visual y maquetación responsive para proyectos institucionales (Diputación Foral de Bizkaia, Interbiak, Juntas Generales de Bizkaia, Intranet Biscaytik, Eusko Jaurlaritza).</li>
+                                    <li><strong>Mantenimiento y Evolutivos</strong>: Gestión de maquetación avanzada en plataformas de producción críticas de diferentes apartados de la web institucional Bizkaia.eus. como por ejemplo: El observatorio de violencia Machista, El Archivo Foral o las Web de Kirolur, Las Juntas Generales de bizkaia. </li>
+                                    <li><strong>Accesibilidad</strong>: Supervisión y validación de los estándares WCAG 2.1, para los desarrollos correspondientes al cliente LANTIK (<abbr title="Bizkaiko Foru Aldundia">BFA</abbr>-<abbr title="Diputación Foral de Bizkaia">DFB</abbr>.)</li>
+                                    <li><strong>Tecnologías utilizadas</strong>: HTML5, CSS3, SCSS, jQuery, Liferay 7.4, Bootstrap, Figma, Adobe XD, Photoshop, Illustrator, Acrobat Pro., Handbrake, ...</li>
+                                </ul>
+                            </div>
+                            </div>
+                        </div>
+
+                        <!-- 2. ATALA -->
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="buruaBi">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#atalaBi" aria-expanded="false" aria-controls="atalaBi">
+                                Experiencia Anterior
+                            </button>
+                            </h3>
+                            <div id="atalaBi" class="accordion-collapse collapse" aria-labelledby="buruaBi" data-bs-parent="#esperientziAkordeoia">
+                            <div class="accordion-body">
+                                <h4 class="h4 card-title fw-bold text-secondary">Diseñador UX/UI y Maquetador Front-End</h4>
+                                <p class="text-muted mb-2">Eurohelp Consulting (Amatech group) | 2004 – Mayo 2022</p>
+                                <ul>
+                                    <li><strong>Proyectos LANTIK</strong>: Diseño, prototipado y maquetación Front-End de múltiples portales públicos y servicios ciudadanos (Bizkaia.eus, gazteak.bizkaia.eus, Web Udalekuak, Enkarterri Museoa).</li>
+                                    <li><strong>Responsable de Accesibilidad</strong>: Responsable de la validación técnica, corrección y adecuación a los criterios de accesibilidad web para los proyectos de Lantik, garantizando el cumplimiento normativo vigente.</li>
+                                    <li><strong>Tecnologías utilizadas</strong>: HTML5, CSS3, SCSS, jQuery, Entornos liferay DXP (7.1 y 7.2), Bootstrap, Adobe Suite (Photoshop, Illustrator, XD, Flash), Handbrake.</li>
+                                </ul>
+
+                                <h4 class="h4 card-title fw-bold text-secondary">Diseñador y Maquetador</h4>
+                                <p class="text-muted mb-2">MEGASOFT - DOMINION Año 2001 – Año 2002</p>
+                                <ul>
+                                    <li><strong>Proyectos Clientes</strong>: Diseño, prototipado y maquetación.</li>
+
+                                    <li><strong>Tecnologías utilizadas</strong>: HTML5, CSS, JS (Dreamweaver)</li>
+                                </ul>
+                            </div>
+                            </div>
+                        </div>
+
+                        </div>
+                </div>
+            </div>
+           
+        </section>
+
+        <hr class="my-5">
+
+        <!-- Portofolio Atala -->
+        <section id="portfolio" class="py-4" aria-labelledby="titulo-portofolio">
+            <h2 id="titulo-portofolio">Portfolio</h2>
+
+            <div class="container py-5">
+
+                <!-- Select responsive -->
+                <div class="d-block d-md-none mb-3">
+                    <label for="tabSelectMobile" class="visually-hidden">Hautatu erlaitz bat</label>
+                    <select id="tabSelectMobile" class="form-select form-select-lg">
+                    <option value="#ux-content">UX-UI Diseinua</option>
+                    <option value="#corp-content">Irdudi Korporatiboa</option>
+                    <option value="#illus-content">Ilustrazioak</option>
+                    </select>
+                </div>
+
+                <div class="row portfolio-containter">
+                    <div class="col portfolio-left"><!-- col-xs-12 col-md-9 -->
+                        <ul class="nav nav-pills justify-content-start mb-4 d-none d-md-flex" id="portfolioTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active px-4 py-2" id="ux-tab" data-bs-toggle="tab" data-bs-target="#ux-content" type="button" role="tab">UX-UI Diseinua</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link px-4 py-2" id="corp-tab" data-bs-toggle="tab" data-bs-target="#corp-content" type="button" role="tab">Irudi Korporatiboa</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link px-4 py-2" id="illus-tab" data-bs-toggle="tab" data-bs-target="#illus-content" type="button" role="tab">Ilustrazioa</button>
+                            </li>
+                        </ul>
+
+                        <!-- 2. ERLEITZEN EDUKIA (TAB PANES) -->
+                        <div class="tab-content" id="portfolioTabsContent">
+                            <!-- === UX-UI ATALA === -->
+                            <div class="tab-pane fade show active" id="ux-content" role="tabpanel">
+                                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                                    <!-- Txartela 1 -->
+                                    <div class="col w-100">
+                                    <div class="card h-100 shadow-sm portfolio-card" data-bs-toggle="modal" data-bs-target="#uxModal1">
+                                        <img src="https://placeholder.com" class="card-img-top" alt="UX Proiektu Azala">
+                                        <div class="card-body">
+                                        <span class="badge bg-primary mb-2">Mugikor App</span>
+                                        <h5 class="card-title fw-bold">E-Commerce UX Diseinua</h5>
+                                        <p class="card-text text-muted text-truncate-2">Erabiltzailearen erosketa-fluxuaren azterketa eta prototipo interaktiboa.</p>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <!-- Txartel gehiago UX atalean hemen gehitu daitezke... -->
+                                </div>
+                            </div>
+                            
+                            <!-- === IRUDI KORPORATIBOA ATALA === -->
+                            <div class="tab-pane fade" id="corp-content" role="tabpanel">
+                                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                                    <!-- Txartela 2 -->
+                                    <div class="col w-100">
+                                    <div class="card h-100 shadow-sm portfolio-card" data-bs-toggle="modal" data-bs-target="#corpModal1">
+                                        <img src="https://placeholder.com" class="card-img-top" alt="Korporatibo Azala">
+                                        <div class="card-body">
+                                        <span class="badge bg-success mb-2">Branding</span>
+                                        <h5 class="card-title fw-bold">Kafetegi baten Marka</h5>
+                                        <p class="card-text text-muted">Logotipo berria, kolore-paleta eta ontzien (packaging) diseinu osoa.</p>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- === ILUSTRAZIOA ATALA === -->
+                            <div class="tab-pane fade" id="illus-content" role="tabpanel">
+                                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                                    <!-- Txartela 3 -->
+                                    <div class="col w-100">
+                                    <div class="card h-100 shadow-sm portfolio-card" data-bs-toggle="modal" data-bs-target="#illusModal1">
+                                        <img src="https://placeholder.com" class="card-img-top" alt="Ilustrazio Azala">
+                                        <div class="card-body">
+                                        <span class="badge bg-warning text-dark mb-2">Editorial</span>
+                                        <h5 class="card-title fw-bold">Liburu baterako Azala</h5>
+                                        <p class="card-text text-muted">Teknika digitala erabiliz egindako fantasia generoko ilustrazioa.</p>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- ========================================== -->
+                            <!-- 3. MODAL LEIHOAK ETA KARRUSELAK            -->
+                            <!-- ========================================== -->
+
+                            <!-- UX Proiektuaren Modala -->
+                            <div class="modal fade" id="uxModal1" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog modal-lg modal-dialog-centered">
+                                    <div class="modal-content">
+                                    <div class="modal-header border-0">
+                                        <h5 class="modal-title fw-bold">E-Commerce UX Diseinua</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Itxi"></button>
+                                    </div>
+                                    <div class="modal-body p-0">
+                                        <!-- KARRUSELA -->
+                                        <div id="uxCarousel1" class="carousel slide" data-bs-ride="false">
+                                        <!-- Karruselaren barruko irudiak -->
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                            <img src="https://placeholder.com" class="d-block w-full" alt="Amaierako diseinua">
+                                            </div>
+                                            <div class="carousel-item">
+                                            <img src="https://placeholder.com" class="d-block w-full" alt="Wireframes">
+                                            </div>
+                                            <div class="carousel-item">
+                                            <img src="https://placeholder.com" class="d-block w-full" alt="User flow map">
+                                            </div>
+                                        </div>
+                                        <!-- Nabigazio geziak -->
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#uxCarousel1" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Aurrekoa</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#uxCarousel1" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Hurrengoa</span>
+                                        </button>
+                                        </div>
+                                    </div>
+                                    <div class="p-4 bg-light">
+                                        <p class="mb-0 text-muted"><strong>Proiekturen azalpena:</strong> Hemen proiektu honen helburuak eta prozesuak kontatu ditzakezu karruselaren irudiekin batera.</p>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Irudi korporatiboaren Modala -->
+                            <div class="modal fade" id="corpModal1" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog modal-lg modal-dialog-centered">
+                                    <div class="modal-content">
+                                    <div class="modal-header border-0">
+                                        <h5 class="modal-title fw-bold">Irudi korporatiboa</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Itxi"></button>
+                                    </div>
+                                    <div class="modal-body p-0">
+                                        <!-- KARRUSELA -->
+                                        <div id="corpCarousel1" class="carousel slide" data-bs-ride="false">
+                                        <!-- Karruselaren barruko irudiak -->
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                            <img src="https://placeholder.com" class="d-block w-full" alt="Amaierako diseinua">
+                                            </div>
+                                            <div class="carousel-item">
+                                            <img src="https://placeholder.com" class="d-block w-full" alt="Wireframes">
+                                            </div>
+                                            <div class="carousel-item">
+                                            <img src="https://placeholder.com" class="d-block w-full" alt="User flow map">
+                                            </div>
+                                        </div>
+                                        <!-- Nabigazio geziak -->
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#corpCarousel1" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Aurrekoa</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#corpCarousel1" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Hurrengoa</span>
+                                        </button>
+                                        </div>
+                                    </div>
+                                    <div class="p-4 bg-light">
+                                        <p class="mb-0 text-muted"><strong>Proiekturen azalpena:</strong> Hemen proiektu honen helburuak eta prozesuak kontatu ditzakezu karruselaren irudiekin batera.</p>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Ilustrazioien Modala -->
+                            <div class="modal fade" id="illusModal1" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog modal-lg modal-dialog-centered">
+                                    <div class="modal-content">
+                                    <div class="modal-header border-0">
+                                        <h5 class="modal-title fw-bold">Irudi korporatiboa</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Itxi"></button>
+                                    </div>
+                                    <div class="modal-body p-0">
+                                        <!-- KARRUSELA -->
+                                        <div id="illusCarousel1" class="carousel slide" data-bs-ride="false">
+                                        <!-- Karruselaren barruko irudiak -->
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                            <img src="img/ilustrazioak/Hegazkinak/Hegazkinak_Thumbnails_01.webp" class="d-block w-full" alt="Ilustrazioa 01">
+                                            </div>
+                                            <div class="carousel-item">
+                                            <img src="img/ilustrazioak/Hegazkinak/Hegazkinak_Thumbnails_02.webp" class="d-block w-full" alt="Ilustrazioa 02">
+                                            </div>
+                                            <div class="carousel-item">
+                                            <img src="img/ilustrazioak/Hegazkinak/Hegazkinak_Thumbnails_03.webp" class="d-block w-full" alt="Ilustrazioa 03">
+                                            </div>
+                                            <div class="carousel-item">
+                                            <img src="img/ilustrazioak/Hegazkinak/Hegazkinak_Thumbnails_04.webp" class="d-block w-full" alt="Ilustrazioa 04">
+                                            </div>
+                                        </div>
+                                        <!-- Nabigazio geziak -->
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#illusCarousel1" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Aurrekoa</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#illusCarousel1" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Hurrengoa</span>
+                                        </button>
+                                        </div>
+                                    </div>
+                                    <div class="p-4 bg-light">
+                                        <p class="mb-0 text-muted"><strong>Proiekturen azalpena:</strong> Hemen proiektu honen helburuak eta prozesuak kontatu ditzakezu karruselaren irudiekin batera.</p>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+                    <!-- <div class="d-none d-sm-block col-md-3 portfolio-right">
+                        
+                    </div> -->
+
+                </div>
+
+            </div>
+            
+        </section>
+
+    </main>
+
+    <!-- Orri-oina -->
+    <footer class="bg-light py-4 border-top mt-auto">
+        <div class="container text-center">
+            <p class="text-muted mb-0">&copy; 2026 Asier Egaña. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <a href="#" class="bg-dark purple-dark btn btn-primary position-fixed bottom-0 end-0 m-4"  aria-label="Volver arriba">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-square" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm8.5 9.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"/>
+        </svg>
+    </a>
+
+    <!-- Bootstrap 5 JavaScript (CDN) - ARIA atributuak dinamikoki aldatzeko ezinbestekoa -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Zure JavaScript kode propioa -->
+    <script src="js/responsiveTabs.js"></script>
+</body>
+</html>
