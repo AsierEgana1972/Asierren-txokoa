@@ -110,21 +110,24 @@ header .nav-link:focus{
 
 .nav-pills{
     column-gap:2px;
-    border-bottom: solid 1px var(--tab-active-bg);
+    /*border-bottom: solid 1px var(--tab-active-bg);*/
+    padding:8px;
+    background-color:var(--accordion-collapsed-bg);
+    border:solid 1px var(--accordion-not-collapsed-bg);
 }
 
 .nav-pills .nav-link[role="tab"]{
-    border-bottom-left-radius: 0;
+    /*border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     border-width: 1px;
     border-style: solid;
-    border-bottom:none;
+    border-bottom:none;*/
 }
 
 .nav-pills .nav-link[role="tab"].active, .nav-pills .show>.nav-link[role="tab"]{
     background-color:var(--tab-active-bg);
-    border:solid 1px var(--tab-active-bg);
-    border-bottom:none;
+    /*border:solid 1px var(--tab-active-bg);
+    border-bottom:none;*/
 }
 
 .nav-pills .nav-link[role="tab"]{
