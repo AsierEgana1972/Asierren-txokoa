@@ -184,6 +184,10 @@ header .nav-link:focus{
     box-shadow: 0 0 2px 3px rgb(255, 255, 255, 0.5);
 }
 
+.personal-img{
+    max-width:290px;
+    width:auto;
+}
 
 @media (max-width:991px){
     /*submenu nagusia*/
