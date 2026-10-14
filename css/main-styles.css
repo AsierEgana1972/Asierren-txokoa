@@ -109,11 +109,12 @@ header .nav-link:focus{
 /*TABS*/
 
 .nav-pills{
-    column-gap:2px;
+    column-gap:5px;
     /*border-bottom: solid 1px var(--tab-active-bg);*/
     padding:8px;
     background-color:var(--accordion-collapsed-bg);
     border:solid 1px var(--accordion-not-collapsed-bg);
+    border-radius:10px;
 }
 
 .nav-pills .nav-link[role="tab"]{
@@ -122,12 +123,14 @@ header .nav-link:focus{
     border-width: 1px;
     border-style: solid;
     border-bottom:none;*/
+    border:none;
 }
 
 .nav-pills .nav-link[role="tab"].active, .nav-pills .show>.nav-link[role="tab"]{
     background-color:var(--tab-active-bg);
     /*border:solid 1px var(--tab-active-bg);
     border-bottom:none;*/
+    border:none;
 }
 
 .nav-pills .nav-link[role="tab"]{
@@ -139,7 +142,7 @@ header .nav-link:focus{
     border:solid 1px var(--tab-active-bg);
     background-color:var(--tab-active-bg);
     color:var(--tab-active-color);
-    border-bottom:none;
+    border:none;
 }
 
 .nav-pills .nav-link.active[role="tab"]{
