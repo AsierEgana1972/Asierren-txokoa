@@ -72,6 +72,15 @@ header .nav-link:focus{
     color:var(--primary-color);
 }
 
+/*HEADER*/
+
+header.fixed{
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0 0 5px 7px rgb(202, 128, 194 , 69%);
+}
+
 /*ACCODION*/
 
 .accordion-header{
