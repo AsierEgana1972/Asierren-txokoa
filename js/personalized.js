@@ -1,14 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Menuko esteka guztiak hautatu (egokitu hautatzailea zure HTMLaren arabera)
   const navLinks = document.querySelectorAll('nav .nav-link');
+  
+  // Hautatu Bootstrap-en menu kolapsagarria (id-a zure HTMLaren arabera aldatu behar bada)
+  const menuKolapsagarria = document.getElementById('navbarNav'); 
 
   navLinks.forEach(link => {
     link.addEventListener('click', function() {
-      // 1. Kendu .active klasea une horretan aktibo dagoenari
+      // 1. KLASE AKTIBOA ALDATU
       document.querySelector('nav .nav-link.active')?.classList.remove('active');
-      
-      // 2. Gehitu .active klasea klikatu berri duzun elementuari
       this.classList.add('active');
+
+      // 2. MENUA AUTOMATIKOKI ITXI (Mugikorrean bada eta irekita badago)
+      if (menuKolapsagarria && menuKolapsagarria.classList.contains('show')) {
+        const bsCollapse = bootstrap.Collapse.getInstance(menuKolapsagarria) 
+                           || new bootstrap.Collapse(menuKolapsagarria);
+        bsCollapse.hide();
+      }
     });
   });
 });
