@@ -80,7 +80,8 @@ header .nav-link:focus{
 
 /*HEADER*/
 
-header.position-fixed{
+header.position-fixed,
+header.sticky-top{
     top: 0;
     width: 100%;
     z-index: 10;
