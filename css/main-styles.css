@@ -184,10 +184,6 @@ header .nav-link:focus{
     box-shadow: 0 0 2px 3px rgb(255, 255, 255, 0.5);
 }
 
-.personal-img{
-    max-width:290px;
-    width:auto;
-}
 
 @media (max-width:991px){
     /*submenu nagusia*/
@@ -195,6 +191,11 @@ header .nav-link:focus{
         background-color: #4b0044;
         background: linear-gradient(180deg,rgba(75, 0, 68, 1) 12%, rgba(90, 8, 82, 1) 100%);
         margin-top:1rem;
+    }
+
+    .personal-img{
+        max-width:220px;
+        width:auto;
     }
 }
 
@@ -215,6 +216,15 @@ header .nav-link:focus{
 }
 
 
+@media (min-width:992px){
+
+    .personal-img{
+        max-width:250px;
+        width:auto;
+    }
+
+}
+
 
 @media (min-width:768px){
     .experiencia-left,
@@ -231,6 +241,7 @@ header .nav-link:focus{
         height: 22rem;
         background-size: 15rem;
     }
+
 }
 
 @media (min-width:1440px){
@@ -238,6 +249,11 @@ header .nav-link:focus{
     .portfolio-right{
         height: 27rem;
         background-size: 21rem;
+    }
+
+    .personal-img{
+        max-width:290px;
+        width:auto;
     }
 }
 
