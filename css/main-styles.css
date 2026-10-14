@@ -39,7 +39,8 @@ html {
 
 
 body{
-    background-color: #f2f2f0;;
+    background-color: #f2f2f0;
+    position:relative;
 }
 
 h1{
