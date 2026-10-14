@@ -74,7 +74,7 @@ header .nav-link:focus{
 
 /*HEADER*/
 
-header.fixed{
+header.position-fixed{
     top: 0;
     width: 100%;
     z-index: 10;
