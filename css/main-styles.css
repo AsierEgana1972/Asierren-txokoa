@@ -185,6 +185,11 @@ header.sticky-top{
     border:solid 1px var(--tab-border-color);
 }
 
+.tab-content>.tab-pane{
+    border-radius: 10px;
+    background-color: #f8f8f8;
+}
+
 /****/
 
 .carousel-item img{
