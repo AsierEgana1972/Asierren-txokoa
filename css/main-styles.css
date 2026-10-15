@@ -227,6 +227,13 @@ header.sticky-top{
     box-shadow: 0 0 2px 3px rgb(255, 255, 255, 0.5);
 }
 
+/******/
+/*MODALS*/
+.modal-title{
+    color:var(--bs-card-title-color);
+}
+
+/*******/
 
 @media (max-width:991px){
     /*submenu nagusia*/
