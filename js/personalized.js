@@ -31,7 +31,7 @@ cards.forEach(card => {
       event.preventDefault(); 
       
       // Lortu ireki nahi den modalaren IDa
-      const modalId = this.getAttribute('data-target-modal');
+      const modalId = this.getAttribute('data-bs-target');
       const modalElement = document.querySelector(modalId);
       
       // Bootstrap modal instantzia sortu eta erakutsi
