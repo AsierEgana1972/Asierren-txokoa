@@ -64,3 +64,49 @@ document.addEventListener('DOMContentLoaded', () => {
     
   });
 });
+
+// NAV TO TOP LINK AND FOCUSES MENU ELEMENT
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Zure klase zehatzak hautatzen ditugu (. puntuarekin)
+  const botoia = document.querySelector(".up-to-top-link");
+  const hasieraElementua = document.querySelector(".primary-nav");
+
+  // Ziurtatzen dugu botoia orrialdean dagoela erroreak saihesteko
+  if (botoia) {
+    // 1. Scroll bidez botoia erakutsi edo ezkutatu
+    window.onscroll = function() {
+      if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+        botoia.style.display = "block";
+      } else {
+        botoia.style.display = "none";
+      }
+    };
+
+    // 2. Klik edo Teklatu bidez (Enter/Space) sakatzean exekutatu
+    botoia.addEventListener("click", function() {
+      // A. Gora igo modu leunean
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+
+      // B. Menuko .active klaseak eguneratu
+      const menuAktiboak = document.querySelectorAll('.navbar-nav .active');
+      menuAktiboak.forEach(function(element) {
+        element.classList.remove('active');
+      });
+
+      const lehenengoLotura = document.querySelector('.navbar-nav .nav-link');
+      if (lehenengoLotura) {
+        lehenengoLotura.classList.add('active');
+      }
+
+      // C. Teklatuaren fokoa goiko menuari eman (.primary-nav)
+      if (hasieraElementua) {
+        hasieraElementua.setAttribute("tabindex", "-1");
+        hasieraElementua.focus({ preventScroll: true });
+      }
+    });
+  }
+});
