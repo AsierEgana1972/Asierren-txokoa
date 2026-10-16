@@ -233,6 +233,19 @@ header.sticky-top{
     color:var(--bs-card-title-color);
 }
 
+.sticky-top-0{
+        top:0;
+    }
+
+.sticky-top-1{
+    top:100px;
+}
+
+.sticky-top-2{
+    top:200px;
+}
+
+
 /*******/
 
 @media (max-width:991px){
@@ -273,6 +286,11 @@ header.sticky-top{
         background-size: 11rem;
     }
 
+    .position-md-sticky{
+        position:sticky!important;
+        z-index:9;
+    }
+
 }
 
 @media (min-width:992px){
@@ -282,21 +300,9 @@ header.sticky-top{
         width:auto;
     }
 
-    .position-md-sticky{
+    .position-lg-sticky{
         position:sticky!important;
         z-index:9;
-    }
-
-    .sticky-top-0{
-        top:0;
-    }
-
-    .sticky-top-1{
-        top:100px;
-    }
-
-    .sticky-top-2{
-        top:200px;
     }
 
 }
