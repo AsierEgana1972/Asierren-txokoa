@@ -256,6 +256,23 @@ header.sticky-top{
 
 /*******/
 
+/*BUTTON-LINK UP TO TOP*/
+
+.up-to-top-link{
+    opacity: .4;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+}
+
+.up-to-top-link:hover,
+.up-to-top-link:focus{
+    opacity: 1;
+}
+
+/*******/
+
 @media (max-width:991px){
     /*submenu nagusia*/
     header ul.navbar-collapse {
