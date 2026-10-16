@@ -19,3 +19,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+// Card guztiak hautatu
+const cards = document.querySelectorAll('.card[role="button"]');
+
+cards.forEach(card => {
+  // Teklatuaren pultsazioak entzun
+  card.addEventListener('keydown', function(event) {
+    // 13 = Enter / Intro, 32 = Espazioa
+    if (event.key === 'Enter' || event.key === ' ') {
+      // Espazioa sakatzean orrialdeak behera scrollik ez egiteko
+      event.preventDefault(); 
+      
+      // Lortu ireki nahi den modalaren IDa
+      const modalId = this.getAttribute('data-target-modal');
+      const modalElement = document.querySelector(modalId);
+      
+      // Bootstrap modal instantzia sortu eta erakutsi
+      const modal = bootstrap.Modal.getOrCreateInstance(modalElement);
+      modal.show();
+    }
+  });
+});
