@@ -266,6 +266,15 @@ header.sticky-top{
 }
 
 
+@media (min-width:768px){
+    .experiencia-left,
+    .portfolio-right{
+        height: 16rem;
+        background-size: 11rem;
+    }
+
+}
+
 @media (min-width:992px){
 
     .personal-img{
@@ -273,14 +282,21 @@ header.sticky-top{
         width:auto;
     }
 
-}
+    .position-md-sticky{
+        position:sticky!important;
+        z-index:9;
+    }
 
+    .sticky-top-0{
+        top:0;
+    }
 
-@media (min-width:768px){
-    .experiencia-left,
-    .portfolio-right{
-        height: 16rem;
-        background-size: 11rem;
+    .sticky-top-1{
+        top:100px;
+    }
+
+    .sticky-top-2{
+        top:200px;
     }
 
 }
