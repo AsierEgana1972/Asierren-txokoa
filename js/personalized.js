@@ -40,3 +40,40 @@ cards.forEach(card => {
     }
   });
 });
+
+//Modala ixtean, fokua berriz klikatutako azken elementura bueltatu
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.card[role="button"]');
+  
+  // Azkenengo irekitako card-a memorian gordetzeko aldagaia
+  let azkenIrekitakoCard = null;
+
+  cards.forEach(card => {
+    // 1. Saguaren klik-a entzun, card-a gordetzeko
+    card.addEventListener('click', function() {
+      azkenIrekitakoCard = this;
+    });
+
+    // 2. Teklatuaren pultsazioa entzun (lehengo bera)
+    card.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault(); 
+        azkenIrekitakoCard = this; // Gordetzailea hemen ere bai
+        this.click(); 
+      }
+    });
+  });
+
+  // 3. Modala ixteko gertaera entzun globaletatik (Bootstrap 5 modal guztientzat)
+  const modalak = document.querySelectorAll('.modal');
+  modalak.forEach(modalElement => {
+    // Bootstrap-ek modala guztiz ezkutatu duenean exekutatzen da gertaera hau
+    modalElement.addEventListener('hidden.bs.modal', () => {
+      // Azken card-a gordeta badago, fokua itzuli
+      if (azkenIrekitakoCard) {
+        azkenIrekitakoCard.focus();
+        azkenIrekitakoCard = null; // Garbitu memoria hurrengo aldirako
+      }
+    });
+  });
+});
