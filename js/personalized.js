@@ -19,85 +19,46 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-// Card guztiak hautatu
-const cards = document.querySelectorAll('.card[role="button"]');
-
-cards.forEach(card => {
-  // Teklatuaren pultsazioak entzun
-  card.addEventListener('keydown', function(event) {
-    // 13 = Enter / Intro, 32 = Espazioa
-    if (event.key === 'Enter' || event.key === ' ') {
-      // Espazioa sakatzean orrialdeak behera scrollik ez egiteko
-      event.preventDefault(); 
-      
-      // Lortu ireki nahi den modalaren IDa
-      const modalId = this.getAttribute('data-bs-target');
-      const modalElement = document.querySelector(modalId);
-      
-      // Bootstrap modal instantzia sortu eta erakutsi
-      const modal = bootstrap.Modal.getOrCreateInstance(modalElement);
-      modal.show();
-    }
-  });
-});
-
-//Modala ixtean, fokua berriz klikatutako azken elementura bueltatu
+// Aldagaia globalago utziko dugu DOM kargatzearen barruan denek ikusi dezaten
 document.addEventListener('DOMContentLoaded', () => {
-  const cards = document.querySelectorAll('.card[role="button"]');
   
-  // Azkenengo irekitako card-a memorian gordetzeko aldagaia
+  // 1. Aldagaia hemen goian definitzen dugu, funtzio guztien amaierara arte bizi dadin
   let azkenIrekitakoCard = null;
 
+  // 2. Card-en logika eta pultsazioak
+  const cards = document.querySelectorAll('.card[role="button"]');
   cards.forEach(card => {
-    // 1. Saguaren klik-a entzun, card-a gordetzeko
+    // Saguaren klik-a
     card.addEventListener('click', function() {
       azkenIrekitakoCard = this;
     });
 
-    // 2. Teklatuaren pultsazioa entzun (lehengo bera)
+    // Teklatuaren pultsazioa (Enter edo Espazioa)
     card.addEventListener('keydown', function(event) {
       if (event.key === 'Enter' || event.key === ' ') {
         event.preventDefault(); 
-        azkenIrekitakoCard = this; // Gordetzailea hemen ere bai
+        azkenIrekitakoCard = this; 
         this.click(); 
       }
     });
   });
 
-  // 3. Modala ixteko gertaera entzun globaletatik (Bootstrap 5 modal guztientzat)
-  const modalak = document.querySelectorAll('.modal');
-  modalak.forEach(modalElement => {
-    // Bootstrap-ek modala guztiz ezkutatu duenean exekutatzen da gertaera hau
-    modalElement.addEventListener('hidden.bs.modal', () => {
-      // Azken card-a gordeta badago, fokua itzuli
-      if (azkenIrekitakoCard) {
-        azkenIrekitakoCard.focus();
-        azkenIrekitakoCard = null; // Garbitu memoria hurrengo aldirako
-      }
-    });
-  });
-});
-
-//nabigatzaile batzuek antzematen duten modaletako aria-hidden eta focus arteko arazoa konpontzeko
-document.addEventListener('DOMContentLoaded', () => {
-  // ... Lehengo zure kodea (cards, azkenIrekitakoCard, etab.) ...
-
+  // 3. Modalen logika (Ixteko prozesua eta errorearen konponbidea)
   const modalak = document.querySelectorAll('.modal');
   modalak.forEach(modalElement => {
     
-    // BERRIA: Konponbidea errorearentzat. Animazioa hasi bezain laster exekutatzen da.
+    // Konponbidea "aria-hidden" errorerako: fokua barruan hautsi ixten hasten denean
     modalElement.addEventListener('hide.bs.modal', () => {
-      // Modala ixten hasi denez, kendu fokua barruan dagoen edozein elementuri (blur)
       if (document.activeElement && modalElement.contains(document.activeElement)) {
         document.activeElement.blur();
       }
     });
 
-    // Lehengo gertaera (GARRANTZITSUA: honek fokua card-era bueltatzen jarraitzen du)
+    // Fokua jatorrizko card-era bueltatu modala guztiz ezkutatu denean
     modalElement.addEventListener('hidden.bs.modal', () => {
       if (azkenIrekitakoCard) {
         azkenIrekitakoCard.focus();
-        azkenIrekitakoCard = null; 
+        azkenIrekitakoCard = null; // Garbitu memoria hurrengo aldirako
       }
     });
     
