@@ -199,6 +199,10 @@ header.sticky-top{
 /******/
 /*ESPERIENTZIA-PORTFOLIO*/
 
+.portfolio-container .nav{
+    box-shadow: 0 5px 6px 0px rgba(0, 0, 0, .3);
+}
+
 .experiencia-left,
 .portfolio-right{
     
