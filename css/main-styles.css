@@ -199,8 +199,12 @@ header.sticky-top{
 /******/
 /*ESPERIENTZIA-PORTFOLIO*/
 
-.portfolio-container .nav{
-    box-shadow: 0 5px 6px 0px rgba(0, 0, 0, .3);
+.portfolio-containter .nav{
+    box-shadow: 0 5px 6px 0px rgba(0, 0, 0, .3)!important;
+}
+
+.portfolio-card:hover {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .5)!important;
 }
 
 .experiencia-left,
@@ -242,7 +246,7 @@ header.sticky-top{
     }
 
 .sticky-top-1{
-    top:100px;
+    top:99px;
 }
 
 .sticky-top-2{
