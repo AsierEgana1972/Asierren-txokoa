@@ -77,3 +77,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+//nabigatzaile batzuek antzematen duten modaletako aria-hidden eta focus arteko arazoa konpontzeko
+document.addEventListener('DOMContentLoaded', () => {
+  // ... Lehengo zure kodea (cards, azkenIrekitakoCard, etab.) ...
+
+  const modalak = document.querySelectorAll('.modal');
+  modalak.forEach(modalElement => {
+    
+    // BERRIA: Konponbidea errorearentzat. Animazioa hasi bezain laster exekutatzen da.
+    modalElement.addEventListener('hide.bs.modal', () => {
+      // Modala ixten hasi denez, kendu fokua barruan dagoen edozein elementuri (blur)
+      if (document.activeElement && modalElement.contains(document.activeElement)) {
+        document.activeElement.blur();
+      }
+    });
+
+    // Lehengo gertaera (GARRANTZITSUA: honek fokua card-era bueltatzen jarraitzen du)
+    modalElement.addEventListener('hidden.bs.modal', () => {
+      if (azkenIrekitakoCard) {
+        azkenIrekitakoCard.focus();
+        azkenIrekitakoCard = null; 
+      }
+    });
+    
+  });
+});
