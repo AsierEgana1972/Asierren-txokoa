@@ -7,6 +7,7 @@
     --primary-color:#FFF;
     --primary-hover-bg:#F4F9F6;
     --tab-fg-color:#8b2881;
+    --body-bg-color:#f2f2f0;
 
 
     --h1-color:#5a0852;
@@ -39,8 +40,12 @@ html {
 
 
 body{
-    background-color: #f2f2f0;
+    background-color: var(--body-bg-color);
     position:relative;
+}
+
+.body-background{
+    background-color: var(--body-bg-color);
 }
 
 h1{
@@ -235,11 +240,14 @@ header.sticky-top{
     box-shadow: 0 0 2px 3px rgb(255, 255, 255, 0.5);
 }
 
-/******/
+/********/
 /*MODALS*/
 .modal-title{
     color:var(--bs-card-title-color);
 }
+
+/*********************/
+/*sticky top position*/
 
 .sticky-top-0{
         top:0;
@@ -250,7 +258,7 @@ header.sticky-top{
 }
 
 .sticky-top-2{
-    top:200px;
+    top:169px;
 }
 
 
