@@ -195,10 +195,20 @@ header.sticky-top{
     background-color: #f8f8f8;
 }
 
-/****/
+/**********/
+/*CAROUSEL*/
 
 .carousel-item img{
     width:100%;
+}
+
+.carousel-control-next-icon, 
+.carousel-control-prev-icon{
+    background-color: var(--tab-active-bg);
+    border-radius: 10px;
+    width: 3rem;
+    height: 3rem;
+    border: solid 3px #fff;
 }
 
 /******/
