@@ -266,23 +266,7 @@ header.sticky-top{
     color:var(--bs-card-title-color);
 }
 
-/*********************/
-/*sticky top position*/
 
-.sticky-top-0{
-        top:0;
-    }
-
-.sticky-top-1{
-    top:99px;
-}
-
-.sticky-top-2{
-    top:162px;
-}
-
-
-/*******/
 
 /*BUTTON-LINK UP TO TOP*/
 
@@ -302,6 +286,30 @@ header.sticky-top{
 }
 
 /*******/
+
+@media (max-width:767px){
+     /*********************/
+    /*sticky top position*/
+
+    .position-xs-sticky{
+        position:sticky!important;
+        z-index:9;
+    }
+
+    .sticky-top-0{
+            top:0;
+        }
+
+    .sticky-top-1{
+        top:99px;
+    }
+
+    .sticky-top-2{
+        top:155px;
+    }
+
+    /*******/
+}
 
 @media (max-width:991px){
     /*submenu nagusia*/
@@ -345,6 +353,23 @@ header.sticky-top{
         position:sticky!important;
         z-index:9;
     }
+
+    /*********************/
+    /*sticky top position*/
+
+    .sticky-top-0{
+            top:0;
+        }
+
+    .sticky-top-1{
+        top:99px;
+    }
+
+    .sticky-top-2{
+        top:162px;
+    }
+
+    /*******/
 
 }
 
