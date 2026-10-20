@@ -211,6 +211,14 @@ header.sticky-top{
     border: solid 3px #fff;
 }
 
+.carousel-control-next{
+    justify-content: flex-end;
+} 
+
+.carousel-control-prev{
+    justify-content: flex-start;
+}
+
 /******/
 /*ESPERIENTZIA-PORTFOLIO*/
 
