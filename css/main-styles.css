@@ -213,10 +213,12 @@ header.sticky-top{
 
 .carousel-control-next{
     justify-content: flex-end;
+    padding-right:10px;
 } 
 
 .carousel-control-prev{
     justify-content: flex-start;
+    padding-left:10px;
 }
 
 /******/
