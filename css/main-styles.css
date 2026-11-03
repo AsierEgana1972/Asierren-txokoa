@@ -444,3 +444,47 @@ header.sticky-top{
     }
 }
 
+
+
+/*********************/
+/**CAROUSEL MOVILE**/
+
+/* Erabili kode hau zure CSS fitxategiaren amaieran */
+@media (max-width: 767.98px) {
+  
+  /* 1. Modalaren egitura pantaila osora behartu */
+  .modal-dialog.modal-fullscreen-md-down {
+    margin: 0 !important;
+    max-width: 100vw !important;
+    width: 100vw !important;
+    height: 100vh !important;
+  }
+
+  /* 2. Edukiari marjinak eta hondo beltz astunak kendu/gortu */
+  .modal-dialog.modal-fullscreen-md-down .modal-content,
+  .modal-dialog.modal-fullscreen-md-down .modal-body {
+    padding: 0 !important;
+    margin: 0 !important;
+    background-color: #222222 !important; /* Gris oso ilun dotorea, beltz itxia arintzeko */
+    display: flex !important;
+    align-items: center !important; /* Irudia bertikalki zentratu */
+    justify-content: center !important;
+  }
+
+  /* 3. Karruselaren edukiontzia zabalera osoan jarri */
+  .modal-body .carousel,
+  .modal-body .carousel-inner,
+  .modal-body .carousel-item {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* 4. Irudi APAISATUAK mugikorraren ertzetaraino zabaldu */
+  .modal-body .carousel-item img {
+    width: 100vw !important;  /* Mugikorraren zabalera oso-osoa hartu */
+    height: auto !important;  /* Altuera proportzionalki kalkulatu */
+    max-height: 65vh !important; /* Ez utzi bertikalki gehiegi luzatzen */
+    object-fit: contain !important; /* Irudi osoa ikusteko, moztu gabe */
+    box-shadow: 0 5px 25px rgba(0,0,0,0.6); /* Itzal honek "Zinema" efektua ematen dio eta hondoarekiko mugatzen du */
+  }
+}
