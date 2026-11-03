@@ -446,77 +446,64 @@ header.sticky-top{
 
 @media (max-width: 767.98px) {
   
-  /* 1. Modal egitura pantaila osora eraman */
+  /* 1. Modal egitura pantaila osora eraman, flex erabili gabe egitura orokorrean */
   .modal-dialog.modal-fullscreen-md-down .modal-content {
     background-color: #1a1a1a !important; 
     height: 100vh !important;
     border: none !important;
   }
 
-  /* 2. Goiburua finko utzi goian */
+  /* 2. Header-a bere lekuan utzi */
   .modal-dialog.modal-fullscreen-md-down .modal-header {
     background-color: #222222 !important;
     border-bottom: 1px solid #333 !important;
     color: #ffffff !important;
     position: relative;
-    z-index: 10;
+    z-index: 10; /* Irudien azpian geratu ez dadin */
   }
 
+  /* Ixteko botoia (X) zuritu atzealde ilunean ikusteko */
   .modal-dialog.modal-fullscreen-md-down .modal-header .btn-close {
     filter: invert(1) grayscale(1) brightness(2);
   }
 
-  /* 3. Modalaren gorputza eta karrusela finko */
+  /* 3. Modalaren gorputza (Body) egokitu */
   .modal-dialog.modal-fullscreen-md-down .modal-body {
     padding: 0 !important;
     margin: 0 !important;
-    height: calc(100vh - 70px) !important; 
+    height: calc(100vh - 70px) !important; /* Pantaila osoaren altuera minus Goiburua */
     overflow: hidden !important;
+    /* GARRANTZITSUA: Hemen bakarrik erabiltzen dugu flex karrusela bertikalki zentratzeko */
+    display: flex !important;
+    align-items: center !important; 
+    justify-content: center !important;
   }
 
+  /* 4. Karruselaren jatorrizko egitura (Bootstrap-ena bere horretan utzi) */
   .modal-body .carousel,
   .modal-body .carousel-inner {
     width: 100% !important;
-    height: 100% !important;
-  }
-
-  /* 4. GAKOA: Bootstrap-en animazio-klase GUZTIEI flexbox aplikatu.
-     Honekin, animazioa egiten ari den bitartean ez da kolperik edo blokeorik egongo */
-  .modal-body .carousel-item,
-  .modal-body .carousel-item.active,
-  .modal-body .carousel-item-next,
-  .modal-body .carousel-item-prev,
-  .modal-body .carousel-item-start,
-  .modal-body .carousel-item-end {
-    height: 100% !important;
-    /* Zentratzea item biltzailean egiten dugu, ez irudian */
-    display: flex !important;
-    align-items: center !important;     /* Bertikalki erdian zentratu */
-    justify-content: center !important;   /* Horizontalki erdian zentratu */
-  }
-
-  /* Bootstrap-ek trantsizioetan behar duen egitura finkoa */
-  .modal-body .carousel-item-next:not(.carousel-item-start),
-  .modal-body .carousel-item-prev:not(.carousel-item-end) {
-    display: flex !important;
-  }
-
-  /* 5. Irudiak: Zuk nahi duzun 150vw tamainan, deformatu gabe */
-  .modal-body .carousel-item img {
-    display: block !important;
-    width: 150vw !important;    
-    max-width: 150vw !important;
     height: auto !important;
-    max-height: calc(100vh - 100px) !important;
+  }
+
+  .modal-body .carousel-item{
+    overflow:clip;
+  }
+
+  .modal-body .carousel-item.item-active{
+    display: flex;
+    justify-content: center;
+  }
+
+  /* 5. Irudi APAISATUAK: Zabalera osoa mugikorraren ertzetaraino */
+  .modal-body .carousel-item img {
+    display: block !important; /* Bootstrap-ek behar duen ezinbesteko propietatea */
+    width: 150vw !important;   /* Mugikorraren zabalera oso-osoa */
+    height: auto !important;   /* Altuera proportzionalki mantendu deformatu gabe */
+    max-height: calc(100vh - 100px) !important; /* Segurtasun tartea goitik eta behetik ez itotzeko */
     object-fit: contain !important;
     box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-    flex-shrink: 0 !important; /* Irudia ez dadin zapaldu */
   }
 }
-
-
-
-
-
 
 
