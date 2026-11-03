@@ -443,3 +443,60 @@ header.sticky-top{
         width:auto;
     }
 }
+
+@media (max-width: 767.98px) {
+  
+  /* 1. Modala pantaila osora eta Flexbox egituran jarri (goitik behera) */
+  .modal-dialog.modal-fullscreen-md-down .modal-content {
+    background-color: #1a1a1a !important; /* Atzealde gris ilun dotorea */
+    height: 100vh !important;
+    display: flex !important;
+    flex-direction: column !important; /* Header-a goian, body-a azpian */
+  }
+
+  /* 2. Goiburua (Header) txukun kokatu eta testuak zuritu */
+  .modal-dialog.modal-fullscreen-md-down .modal-header {
+    background-color: #222222 !important; /* Pixka bat ilunagoa bereizteko */
+    border-bottom: 1px solid #333 !important; /* Marra banatzaile leuna */
+    color: #ffffff !important;
+    padding: 15px !important;
+    flex-shrink: 0 !important; /* Header-ak ez du tamainarik galduko */
+  }
+
+  /* Goiburuko ixteko botoia (X) zuritu ondo ikusteko */
+  .modal-dialog.modal-fullscreen-md-down .modal-header .btn-close {
+    filter: invert(1) grayscale(1) brightness(2); 
+  }
+
+  /* 3. Body-ak geratzen den espazio GUZTIA hartuko du */
+  .modal-dialog.modal-fullscreen-md-down .modal-body {
+    padding: 0 !important;
+    margin: 0 !important;
+    flex-grow: 1 !important; /* Geratzen den espazio osoa betetzen du */
+    display: flex !important;
+    align-items: center !important; /* Irudia bertikalki erdian zentratu */
+    justify-content: center !important;
+    overflow: hidden !important;
+  }
+
+  /* 4. Karruselaren barruko egitura moldatu */
+  .modal-body .carousel,
+  .modal-body .carousel-inner,
+  .modal-body .carousel-item {
+    width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* 5. Irudi APAISATUAK: Zabalera osoa hartu baina header-a zapaldu gabe */
+  .modal-body .carousel-item img {
+    width: 100vw !important;  /* Mugikorraren zabalera osoa ertzeraino */
+    height: auto !important;   /* Proportzioak mantendu */
+    max-height: calc(100vh - 70px) !important; /* Altuera mugatu Header-aren lekua kenduta */
+    object-fit: contain !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Zinema efektua */
+  }
+}
+
