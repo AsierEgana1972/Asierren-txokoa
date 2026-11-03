@@ -374,6 +374,14 @@ header.sticky-top{
     }
 
     /*******/
+    /**CAROUSEL**/
+
+    .carousel-item.active {
+        display: flex;
+        height: calc(100% - 400px);
+        justify-content: center;
+    }
+
 
 }
 
