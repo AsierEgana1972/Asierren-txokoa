@@ -453,7 +453,7 @@ header.sticky-top{
     border: none !important;
   }
 
-  /* 2. Goiburua (Header) finko utzi goian */
+  /* 2. Goiburua finko utzi goian */
   .modal-dialog.modal-fullscreen-md-down .modal-header {
     background-color: #222222 !important;
     border-bottom: 1px solid #333 !important;
@@ -462,43 +462,64 @@ header.sticky-top{
     z-index: 10;
   }
 
-  /* Ixteko botoia (X) zuritu atzealde ilunean */
   .modal-dialog.modal-fullscreen-md-down .modal-header .btn-close {
     filter: invert(1) grayscale(1) brightness(2);
   }
 
-  /* 3. Modalaren gorputza (Body): altuera mugatu Goiburua kenduta */
+  /* 3. Modalaren gorputza eta karrusela finko */
   .modal-dialog.modal-fullscreen-md-down .modal-body {
     padding: 0 !important;
     margin: 0 !important;
     height: calc(100vh - 70px) !important; 
     overflow: hidden !important;
+    position: relative;
   }
 
-  /* 4. Karruselaren edukiontzi nagusiak */
   .modal-body .carousel,
-  .modal-body .carousel-inner {
+  .modal-body .carousel-inner,
+  .modal-body .carousel-item {
     width: 100% !important;
     height: 100% !important;
   }
 
-  /* 5. Irudiak: Zuk nahi duzun 150vw tamainan eta animazio kolperik gabe ZENTRATUTA */
+  /* 4. Irudiak: 150vw-tan, kolpeik gabe, HORIZONTAK ET BERTIKALKI ZENTRATUTA */
   .modal-body .carousel-item img {
-    display: block !important; /* Bootstrap-en animazio natiboarentzat ezinbestekoa */
-    width: 150vw !important;    /* Irudi apaisatuak nahi duzun bezala handituta */
+    display: block !important;
+    width: 150vw !important;    
     max-width: 150vw !important;
     height: auto !important;
     
-    /* MODU BERRI ETA LEUNA IRUDIA ERDIAN KOKATZEKO (KOLPEIK GABE) */
-    margin-left: 50% !important;
-    transform: translateX(-50%) !important;
+    /* ZENTRATZE HORIZONTAL ETA BERTIKAL PERFEKTUA */
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
     
-    /* Altuera segurtasun tartea */
     max-height: calc(100vh - 100px) !important;
     object-fit: contain !important;
     box-shadow: 0 10px 30px rgba(0,0,0,0.6);
   }
+
+  /* 5. IRISGARRITASUNA: Alboetako gezi deigarriak mugikorrean kendu */
+  /* Erabiltzaileak hatzarekin (swipe) pasatuko du irudia, naturalagoa da */
+  .modal-body .carousel-control-prev,
+  .modal-body .carousel-control-next {
+    display: none !important; /* Edo opazitatea %20ra jaitsi nahiago baduzu */
+  }
+
+  /* Beheko adierazleak (puntuak) irisgarriagoak egin sakatzeko */
+  .modal-body .carousel-indicators {
+    margin-bottom: 2rem !important;
+  }
+  .modal-body .carousel-indicators [data-bs-target] {
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 50% !important; /* Puntu borobil handiagoak sakatzeko errazagoak izan daitezen */
+    margin: 0 6px !important;
+    background-color: #fff !important;
+  }
 }
+
 
 
 
