@@ -480,19 +480,28 @@ header.sticky-top{
     height: 100% !important;
   }
 
-  /* 4. GAKOA: .carousel-item bakoitza flexbox bihurtu irudia barruan zentratzeko */
-  /* Bootstrap-en animazioak ez apurtzeko, trantsizioan dauden itemei ere aplikatzen zaie */
+  /* 4. GAKOA: Bootstrap-en animazio-klase GUZTIEI flexbox aplikatu.
+     Honekin, animazioa egiten ari den bitartean ez da kolperik edo blokeorik egongo */
   .modal-body .carousel-item,
   .modal-body .carousel-item.active,
   .modal-body .carousel-item-next,
-  .modal-body .carousel-item-prev {
+  .modal-body .carousel-item-prev,
+  .modal-body .carousel-item-start,
+  .modal-body .carousel-item-end {
     height: 100% !important;
+    /* Zentratzea item biltzailean egiten dugu, ez irudian */
     display: flex !important;
     align-items: center !important;     /* Bertikalki erdian zentratu */
     justify-content: center !important;   /* Horizontalki erdian zentratu */
   }
 
-  /* 5. Irudiak: Zuk nahi duzun 150vw tamainan, egitura garbiarekin */
+  /* Bootstrap-ek trantsizioetan behar duen egitura finkoa */
+  .modal-body .carousel-item-next:not(.carousel-item-start),
+  .modal-body .carousel-item-prev:not(.carousel-item-end) {
+    display: flex !important;
+  }
+
+  /* 5. Irudiak: Zuk nahi duzun 150vw tamainan, deformatu gabe */
   .modal-body .carousel-item img {
     display: block !important;
     width: 150vw !important;    
@@ -501,29 +510,10 @@ header.sticky-top{
     max-height: calc(100vh - 100px) !important;
     object-fit: contain !important;
     box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-    flex-shrink: 0 !important; /* Irudia ez dela deformatuko ziurtatzeko */
-  }
-
-  /* 6. IRISGARRITASUNA: Geziak handitu eta errazagoak egin sakatzeko */
-  .modal-body .carousel-control-prev,
-  .modal-body .carousel-control-next {
-    width: 15% !important; /* Sakatze eremua zabaldu dugu mugikorrean erosoagoa izateko */
-    z-index: 11 !important;
-  }
-
-  /* Gezien ikonoak pixka bat handitu */
-  .modal-body .carousel-control-prev-icon,
-  .modal-body .carousel-control-next-icon {
-    width: 2.5rem !important;
-    height: 2.5rem !important;
-  }
-
-  /* Beheko adierazleak (puntuak) */
-  .modal-body .carousel-indicators {
-    margin-bottom: 2rem !important;
-    z-index: 11 !important;
+    flex-shrink: 0 !important; /* Irudia ez dadin zapaldu */
   }
 }
+
 
 
 
