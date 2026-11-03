@@ -472,53 +472,60 @@ header.sticky-top{
     margin: 0 !important;
     height: calc(100vh - 70px) !important; 
     overflow: hidden !important;
-    position: relative;
   }
 
   .modal-body .carousel,
-  .modal-body .carousel-inner,
-  .modal-body .carousel-item {
+  .modal-body .carousel-inner {
     width: 100% !important;
     height: 100% !important;
   }
 
-  /* 4. Irudiak: 150vw-tan, kolpeik gabe, HORIZONTAK ET BERTIKALKI ZENTRATUTA */
+  /* 4. GAKOA: .carousel-item bakoitza flexbox bihurtu irudia barruan zentratzeko */
+  /* Bootstrap-en animazioak ez apurtzeko, trantsizioan dauden itemei ere aplikatzen zaie */
+  .modal-body .carousel-item,
+  .modal-body .carousel-item.active,
+  .modal-body .carousel-item-next,
+  .modal-body .carousel-item-prev {
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;     /* Bertikalki erdian zentratu */
+    justify-content: center !important;   /* Horizontalki erdian zentratu */
+  }
+
+  /* 5. Irudiak: Zuk nahi duzun 150vw tamainan, egitura garbiarekin */
   .modal-body .carousel-item img {
     display: block !important;
     width: 150vw !important;    
     max-width: 150vw !important;
     height: auto !important;
-    
-    /* ZENTRATZE HORIZONTAL ETA BERTIKAL PERFEKTUA */
-    position: absolute !important;
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    
     max-height: calc(100vh - 100px) !important;
     object-fit: contain !important;
     box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    flex-shrink: 0 !important; /* Irudia ez dela deformatuko ziurtatzeko */
   }
 
-  /* 5. IRISGARRITASUNA: Alboetako gezi deigarriak mugikorrean kendu */
-  /* Erabiltzaileak hatzarekin (swipe) pasatuko du irudia, naturalagoa da */
+  /* 6. IRISGARRITASUNA: Geziak handitu eta errazagoak egin sakatzeko */
   .modal-body .carousel-control-prev,
   .modal-body .carousel-control-next {
-    display: none !important; /* Edo opazitatea %20ra jaitsi nahiago baduzu */
+    width: 15% !important; /* Sakatze eremua zabaldu dugu mugikorrean erosoagoa izateko */
+    z-index: 11 !important;
   }
 
-  /* Beheko adierazleak (puntuak) irisgarriagoak egin sakatzeko */
+  /* Gezien ikonoak pixka bat handitu */
+  .modal-body .carousel-control-prev-icon,
+  .modal-body .carousel-control-next-icon {
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+  }
+
+  /* Beheko adierazleak (puntuak) */
   .modal-body .carousel-indicators {
     margin-bottom: 2rem !important;
-  }
-  .modal-body .carousel-indicators [data-bs-target] {
-    width: 12px !important;
-    height: 12px !important;
-    border-radius: 50% !important; /* Puntu borobil handiagoak sakatzeko errazagoak izan daitezen */
-    margin: 0 6px !important;
-    background-color: #fff !important;
+    z-index: 11 !important;
   }
 }
+
+
 
 
 
