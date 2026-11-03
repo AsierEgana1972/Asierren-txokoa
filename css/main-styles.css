@@ -289,6 +289,25 @@ header.sticky-top{
     opacity: 1;
 }
 
+/******************************/
+/**MODAL IMG RESPONSIVE SIZE**/
+
+/* Mugikorrean soilik modalaren barruko espazioak ezabatuko ditugu */
+@media (max-width: 767.98px) {
+  .modal-fullscreen-md-down .modal-body {
+    padding: 0 !important;
+    background-color: #000; /* Atzealde beltzak irudiak gehiago nabarmentzen ditu */
+  }
+  
+  .carousel-item img {
+    height: 100vh; /* Karruselaren irudiak mugikorraren altuera osoa hartuko du */
+    object-fit: contain; /* Irudia bere osotasunean ikusiko da, deformatu gabe */
+  }
+}
+
+
+
+
 /*******/
 
 @media (max-width:767px){
@@ -316,11 +335,15 @@ header.sticky-top{
 
     /**CAROUSEL**/
 
-    .carousel-item.active {
+   /* .carousel-item.active {
         display: flex;
         height: calc(100% - 400px);
         justify-content: center;
     }
+
+    .carousel-item img{
+        width:auto;
+    }*/
 }
 
 @media (max-width:991px){
