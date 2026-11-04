@@ -515,6 +515,21 @@ header.sticky-top{
      transition: opacity 0.6s ease-in-out !important;  /* GEHITU desagertze denbora berbera */
     }
 
+/* 1. Trantsizioan dauden irudiak PANTALAREN ERDIAN FINKO mantentzeko (absolutuki), 
+      goitik behera eror ez daitezen: */
+    .modal-body .carousel-item-next,
+    .modal-body .carousel-item-prev {
+     position: absolute !important;
+     top: 0 !important;
+     left: 0 !important;
+     width: 100% !important;
+    }
+
+/* 2. Zuzendu trantsizioaren denbora-propietatea (opazitatea bakarrik animatzeko): */
+    .modal-body .carousel-item {
+     transition: opacity 0.6s ease-in-out !important;
+    }
+
 /***************************************************************************************************************/
 
   .modal-body .carousel-item.item-active{
