@@ -446,51 +446,7 @@ header.sticky-top{
 
 @media (max-width: 767.98px) {
   
-  /* 1. Modal eta karruselaren edukiontziak egokitu */
-  .modal-dialog.modal-fullscreen-md-down .modal-content {
-    background-color: #1a1a1a !important; 
-    height: 100vh !important;
-    border: none !important;
-  }
 
-  .modal-dialog.modal-fullscreen-md-down .modal-body {
-    padding: 0 !important;
-    margin: 0 !important;
-    height: calc(100vh - 70px) !important; 
-    overflow: hidden !important;
-  }
-
-  .modal-body .carousel,
-  .modal-body .carousel-inner {
-    width: 100% !important;
-    height: 100% !important;
-  }
-
-  /* 2. Edukiontzi bakoitzak modalaren gorputzaren altuera osoa hartuko du */
-  .modal-body .carousel-item {
-    height: 100% !important;
-    /* EZ erabili hemen flex, float edo absolute irteerarik, 
-       Bootstrap-ek bere bide horizontala libre izan dezan */
-  }
-
-  /* 3. GAKOA: Irudia 150vw-ra handitu eta BERTIVALKI ETA HORIZONTALKI ZENTRATU 
-     Bootstrap-en traslazio/slide animazio natiboa batere kaltetu gabe */
-  .modal-body .carousel-item img {
-    display: block !important;
-    width: 150vw !important;    
-    max-width: 150vw !important;
-    height: auto !important;
-    max-height: calc(100vh - 120px) !important;
-    object-fit: contain !important;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-
-    /* TRANGIZIO HORIZONTALA ETA ZENTRATZE BERTIKALA BATERATZEN DITUEN FORMULA: */
-    position: relative !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important; /* Altueraren erdi-erdian jartzen du */
-    margin-left: auto !important;
-    margin-right: auto !important;           /* Zabalera handia horizontalki zentratzen du */
-  }
 }
 
 
