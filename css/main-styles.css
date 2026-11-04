@@ -289,14 +289,21 @@ header.sticky-top{
     opacity: 1;
 }
 
+
 /******************************/
 /**MODAL IMG RESPONSIVE SIZE**/
 
 /* Mugikorrean soilik modalaren barruko espazioak ezabatuko ditugu */
+
 @media (max-width: 767.98px) {
+    
   .modal-fullscreen-md-down .modal-body {
     padding: 0 !important;
     background-color: #000; /* Atzealde beltzak irudiak gehiago nabarmentzen ditu */
+  }
+
+  .modal-dialog.modal-fullscreen-md-down .modal-body {
+    overflow-y: hidden!important;
   }
   
   .carousel-item img {
@@ -304,11 +311,8 @@ header.sticky-top{
     object-fit: contain; /* Irudia bere osotasunean ikusiko da, deformatu gabe */
   }
 
-}
 
-@media (max-width: 767.98px) {
-
-  /* 1. ZUZENKETA: Edukiontzi bakoitzari modalaren altuera finkoa eman (70px goiburua kenduta)
+/* 1. ZUZENKETA: Edukiontzi bakoitzari modalaren altuera finkoa eman (70px goiburua kenduta)
      eta testu-lerroaren altuera berdindu zentratze bertikala indarrean jartzeko */
   .modal-body .carousel-inner,
   .modal-body .carousel-item {
@@ -318,7 +322,7 @@ header.sticky-top{
     overflow: hidden !important;
   }
 
-  /* 2. IRUDIA MUGITZEN ARI DENEAN:
+/* 2. IRUDIA MUGITZEN ARI DENEAN:
      Guztiz zentratuta, tamaina normalean eta lausoago (%40) */
   .modal-body .carousel-item img {
     display: inline-block !important;
@@ -333,7 +337,7 @@ header.sticky-top{
     transform: scale(1) !important;
     opacity: 0.4 !important;
     
-    /* Trantsizio denbora leuna zoom-erako eta argitasunerako */
+/* Trantsizio denbora leuna zoom-erako eta argitasunerako */
     transition: transform 0.5s ease-out, opacity 0.5s ease-out !important;
   }
 
@@ -372,9 +376,6 @@ header.sticky-top{
     padding-left: 3px;
   }
 
-  .modal-fullscreen-md-down .modal-body {
-        overflow-y: hidden!important;
-    }
 }
 
 /*******/
