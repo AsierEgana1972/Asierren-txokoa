@@ -445,9 +445,43 @@ header.sticky-top{
 }
 
 @media (max-width: 767.98px) {
-  
 
+  /* 1. Edukiontziak finko eta zentratuta */
+  .modal-body .carousel-item {
+    height: 100% !important;
+    text-align: center !important;
+  }
+
+  /* 2. IRUDIAREN JATORRIZKO EGOERA (Mugitzen ari denean):
+     Tamaina normala, deformatu gabe eta bertikalki zentratuta. */
+  .modal-body .carousel-item img {
+    display: inline-block !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: calc(100vh - 120px) !important;
+    object-fit: contain !important;
+    position: relative !important;
+    top: 50% !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+
+    /* TRANTSIZIO BALTSA: Mugimenduan denean tamaina normala du (%100) 
+       eta pixka bat lauso edo ilunago dago (%40 opazitatea) */
+    transform: translateY(-50%) scale(1) !important;
+    opacity: 0.4 !important;
+
+    /* Definitu zoomaren eta argitzearen abiadura leuna (0.5 segundo) */
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out !important;
+  }
+
+  /* 3. GAKOA - IRUDIA AKTIBO DAGOENEAN (Trantsizioa bukatzean):
+     Bootstrap-ek '.active' klasea jartzen dion unean, automatikoki 
+     zoom-a (%150) eta argitasun osoa (%100) aktibatuko dira klik egin gabe. */
+  .modal-body .carousel-item.active img {
+    transform: translateY(-50%) scale(1.5) !important; /* Zuk nahi duzun 150vw-ko anpliazioa */
+    opacity: 1 !important;                             /* Fade-in efektua argitasun osoz */
+  }
 }
+
 
 
 
