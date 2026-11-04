@@ -363,6 +363,18 @@ header.sticky-top{
     opacity: 1 !important;
     background-color: #0d6efd !important; /* Zure webgunearen kolore nagusia jar dezakezu */
   }
+
+  .carousel-control-next{
+    padding-right: 3px;
+  }
+
+  .carousel-control-prev{
+    padding-left: 3px;
+  }
+
+  .modal-fullscreen-md-down .modal-body {
+        overflow-y: hidden;
+    }
 }
 
 /*******/
