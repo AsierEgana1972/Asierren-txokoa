@@ -304,7 +304,7 @@ header.sticky-top{
 
   .modal-dialog.modal-fullscreen-md-down .modal-body {
     overflow-y: hidden!important;
-    background:linear-gradient(45deg, #8b2881, #4b0044)!important;
+    background:linear-gradient(45deg, #8b2881a8, #690047)!important;
   }
   
   .carousel-item img {
@@ -351,7 +351,7 @@ header.sticky-top{
     opacity: 1 !important;              /* Fade-in efektu garbia */
 
     /* GAKOA (Sarrera): Irudi berria iristen denean, zoom efektua leunago joatea nahi dugu (0.5s),
-       baina atzerapen txiki batekin (delay: 0.2s) carousela erabat gelditu arte itxoiteko. */
+   baina atzerapen txiki batekin (delay: 0.2s) carousela erabat gelditu arte itxoiteko. */
     transition: transform 0.5s ease-out 0.2s, opacity 0.5s ease-out !important;/*BERRIA*/
   }
 
