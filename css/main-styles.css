@@ -303,10 +303,67 @@ header.sticky-top{
     height: 100vh; /* Karruselaren irudiak mugikorraren altuera osoa hartuko du */
     object-fit: contain; /* Irudia bere osotasunean ikusiko da, deformatu gabe */
   }
+
 }
 
+@media (max-width: 767.98px) {
 
+  /* 1. ZUZENKETA: Edukiontzi bakoitzari modalaren altuera finkoa eman (70px goiburua kenduta)
+     eta testu-lerroaren altuera berdindu zentratze bertikala indarrean jartzeko */
+  .modal-body .carousel-inner,
+  .modal-body .carousel-item {
+    height: calc(100vh - 70px) !important;
+    line-height: calc(100vh - 70px) !important; /* Lerroaren altuerak irudia erdian finkatzen du */
+    text-align: center !important;
+    overflow: hidden !important;
+  }
 
+  /* 2. IRUDIA MUGITZEN ARI DENEAN:
+     Guztiz zentratuta, tamaina normalean eta lausoago (%40) */
+  .modal-body .carousel-item img {
+    display: inline-block !important;
+    vertical-align: middle !important; /* Lerrokatu erdi-erdian goiko line-height-ari esker */
+    width: 100% !important;
+    height: auto !important;
+    max-height: calc(100vh - 120px) !important;
+    object-fit: contain !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+
+    /* Hasierako egoera trantsizioan zehar (Zoom-ik gabe) */
+    transform: scale(1) !important;
+    opacity: 0.4 !important;
+    
+    /* Trantsizio denbora leuna zoom-erako eta argitasunerako */
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out !important;
+  }
+
+  /* 3. IRUDIA AKTIBO DAGOENEAN (Trantsizioa amaitutakoan):
+     Automatikoki zoom leuna (%150) eta argitasun osoa hartuko du, ERDIAN EGONIK */
+  .modal-body .carousel-item.active img {
+    transform: scale(1.5) !important; /* Zuk nahi duzun 150vw-ko anpliazio indartsua */
+    opacity: 1 !important;              /* Fade-in efektu garbia */
+  }
+
+  /* 2. Beheko marrak puntu borobil handi eta irisgarri bihurtu */
+  .modal-body .carousel-indicators {
+    bottom: 30px !important; /* Beheko marjinan kokatu, iruditik kanpo */
+  }
+
+  .modal-body .carousel-indicators [data-bs-target] {
+    width: 14px !important;
+    height: 14px !important;
+    border-radius: 50% !important; /* Puntu borobilak marra luzeen ordez */
+    margin: 0 8px !important;
+    background-color: #ffffff !important;
+    opacity: 0.5;
+  }
+
+  /* Uneko irudiaren puntua argiago nabarmendu */
+  .modal-body .carousel-indicators .active {
+    opacity: 1 !important;
+    background-color: #0d6efd !important; /* Zure webgunearen kolore nagusia jar dezakezu */
+  }
+}
 
 /*******/
 
@@ -330,20 +387,6 @@ header.sticky-top{
     .sticky-top-2{
         top:155px;
     }
-
-    /*******/
-
-    /**CAROUSEL**/
-
-   /* .carousel-item.active {
-        display: flex;
-        height: calc(100% - 400px);
-        justify-content: center;
-    }
-
-    .carousel-item img{
-        width:auto;
-    }*/
 }
 
 @media (max-width:991px){
@@ -442,65 +485,6 @@ header.sticky-top{
         max-width:290px;
         width:auto;
     }
-}
-
-@media (max-width: 767.98px) {
-
-  /* 1. ZUZENKETA: Edukiontzi bakoitzari modalaren altuera finkoa eman (70px goiburua kenduta)
-     eta testu-lerroaren altuera berdindu zentratze bertikala indarrean jartzeko */
-  .modal-body .carousel-inner,
-  .modal-body .carousel-item {
-    height: calc(100vh - 70px) !important;
-    line-height: calc(100vh - 70px) !important; /* Lerroaren altuerak irudia erdian finkatzen du */
-    text-align: center !important;
-    overflow: hidden !important;
-  }
-
-  /* 2. IRUDIA MUGITZEN ARI DENEAN:
-     Guztiz zentratuta, tamaina normalean eta lausoago (%40) */
-  .modal-body .carousel-item img {
-    display: inline-block !important;
-    vertical-align: middle !important; /* Lerrokatu erdi-erdian goiko line-height-ari esker */
-    width: 100% !important;
-    height: auto !important;
-    max-height: calc(100vh - 120px) !important;
-    object-fit: contain !important;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-
-    /* Hasierako egoera trantsizioan zehar (Zoom-ik gabe) */
-    transform: scale(1) !important;
-    opacity: 0.4 !important;
-    
-    /* Trantsizio denbora leuna zoom-erako eta argitasunerako */
-    transition: transform 0.5s ease-out, opacity 0.5s ease-out !important;
-  }
-
-  /* 3. IRUDIA AKTIBO DAGOENEAN (Trantsizioa amaitutakoan):
-     Automatikoki zoom leuna (%150) eta argitasun osoa hartuko du, ERDIAN EGONIK */
-  .modal-body .carousel-item.active img {
-    transform: scale(1.5) !important; /* Zuk nahi duzun 150vw-ko anpliazio indartsua */
-    opacity: 1 !important;              /* Fade-in efektu garbia */
-  }
-
-  /* 2. Beheko marrak puntu borobil handi eta irisgarri bihurtu */
-  .modal-body .carousel-indicators {
-    bottom: 30px !important; /* Beheko marjinan kokatu, iruditik kanpo */
-  }
-
-  .modal-body .carousel-indicators [data-bs-target] {
-    width: 14px !important;
-    height: 14px !important;
-    border-radius: 50% !important; /* Puntu borobilak marra luzeen ordez */
-    margin: 0 8px !important;
-    background-color: #ffffff !important;
-    opacity: 0.5;
-  }
-
-  /* Uneko irudiaren puntua argiago nabarmendu */
-  .modal-body .carousel-indicators .active {
-    opacity: 1 !important;
-    background-color: #0d6efd !important; /* Zure webgunearen kolore nagusia jar dezakezu */
-  }
 }
 
 
