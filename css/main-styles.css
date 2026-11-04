@@ -340,10 +340,22 @@ header.sticky-top{
     
 /* Trantsizio denbora leuna zoom-erako eta argitasunerako */
     /*transition: transform 0.5s ease-out, opacity 0.5s ease-out !important;*/
-    transition: transform 0.5s ease-out 0.2s, opacity 0.5s ease-out !important; /*ALDAKETA*/
+    transition: transform 0.2s ease-in 0.2s, opacity 0.5s ease-out !important; /*ALDAKETA*/
   }
 
-  /* 4. ZUZENKETA BERRIA!!!!: Bootstrap mugitzen ari den bitartean, scale-a indarrez 1-ean mantendu.
+
+  /* 3. IRUDIA AKTIBO DAGOENEAN (Trantsizioa amaitutakoan):
+     Automatikoki zoom leuna (%150) eta argitasun osoa hartuko du, ERDIAN EGONIK */
+  .modal-body .carousel-item.active img {
+    transform: scale(1.5) !important; /* Zuk nahi duzun 150vw-ko anpliazio indartsua */
+    opacity: 1 !important;              /* Fade-in efektu garbia */
+
+    /* GAKOA (Sarrera): Irudi berria iristen denean, zoom efektua leunago joatea nahi dugu (0.5s),
+       baina atzerapen txiki batekin (delay: 0.2s) carousela erabat gelditu arte itxoiteko. */
+    transition: transform 0.5s ease-out 0.2s, opacity 0.5s ease-out !important;/*BERRIA*/
+  }
+
+/* 4. ZUZENKETA BERRIA!!!!: Bootstrap mugitzen ari den bitartean, scale-a indarrez 1-ean mantendu.
      Honekin ziurtatzen dugu botoia sakatu bezain laster irudia txikitu egiten dela eta ez dela scale(1.5) egoeran mugitzen. */
   .modal-body .carousel-item-next img,
   .modal-body .carousel-item-prev img,
@@ -352,13 +364,6 @@ header.sticky-top{
     transform: scale(1) !important;
     /* Mugimenduak irauten duen bitartean opacity-a baxu mantendu irudiek talkik egin ez dezaten */
     opacity: 0.4 !important; 
-  }
-
-  /* 3. IRUDIA AKTIBO DAGOENEAN (Trantsizioa amaitutakoan):
-     Automatikoki zoom leuna (%150) eta argitasun osoa hartuko du, ERDIAN EGONIK */
-  .modal-body .carousel-item.active img {
-    transform: scale(1.5) !important; /* Zuk nahi duzun 150vw-ko anpliazio indartsua */
-    opacity: 1 !important;              /* Fade-in efektu garbia */
   }
 
   /* 2. Beheko marrak puntu borobil handi eta irisgarri bihurtu */
