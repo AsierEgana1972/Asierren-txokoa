@@ -490,6 +490,33 @@ header.sticky-top{
     overflow:clip;
   }
 
+  /***************************************************************************************************************/
+
+  /* 1. Elementu bakoitzari murgiltze-efektua (fade) eta trantsizio berria emateko: */
+    .modal-body .carousel-item {
+     display: none !important;
+     float: none !important;                           /* EZABATU jatorrizko float: left */
+     transform: none !important;                       /* EZABATU kolpea sortzen zuen translateX mugimendua */
+     transition: opacity 0.6s ease-in-out !important;  /* GEHITU opazitate bidezko desagertze leuna */
+    }
+
+/* 2. Irudi aktiboa klik egitean Flexbox bidez erakusteko eta opazitatea osatzeko: */
+    .modal-body .carousel-item.active,
+    .modal-body .carousel-item-next.carousel-item-start,
+    .modal-body .carousel-item-prev.carousel-item-end {
+     display: flex !important;                         /* GEHITU zure gogoko Flexbox egitura */
+     opacity: 1 !important;                            /* GEHITU guztiz ikusgai egon dadin */
+    }
+
+/* 3. Aurreko irudia leun-leun ezkutatu eta desagertzeko: */
+    .modal-body .carousel-item-start.active,
+    .modal-body .carousel-item-end.active {
+     opacity: 0 !important;                            /* GEHITU opazitatea hutsera jaisteko */
+     transition: opacity 0.6s ease-in-out !important;  /* GEHITU desagertze denbora berbera */
+    }
+
+/***************************************************************************************************************/
+
   .modal-body .carousel-item.item-active{
     display: flex;
     justify-content: center;
