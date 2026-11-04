@@ -482,25 +482,6 @@ header.sticky-top{
     opacity: 1 !important;              /* Fade-in efektu garbia */
   }
 
-/*****************************/
-/**IRUDIEN ARTEKO NABIGAZIOA**/
-
-  /* 5. ZUZENKETA: Geziak IKUSTEZIN bihurtu, baina pantailan mantendu 
-     hatzarekin pasatzeko funtzioak (swipe) martxan jarrai dezan */
-  .modal-body .carousel-control-prev,
-  .modal-body .carousel-control-next {
-    display: flex !important;      /* BERRIRO AKTIBATU egitura */
-    background: transparent !important;
-    width: 25% !important;         /* Sakatze-eremu zabala hatzarekin eroso pasatzeko */
-    opacity: 0 !important;          /* %100 IKUSTEZIN bihurtu (ez dute irudia estaliko) */
-  }
-
-  /* Gezien jatorrizko ikono zuriak guztiz ezkutatu */
-  .modal-body .carousel-control-prev-icon,
-  .modal-body .carousel-control-next-icon {
-    display: none !important;
-  }
-
   /* 2. Beheko marrak puntu borobil handi eta irisgarri bihurtu */
   .modal-body .carousel-indicators {
     bottom: 30px !important; /* Beheko marjinan kokatu, iruditik kanpo */
