@@ -316,7 +316,7 @@ header.sticky-top{
  /*ZUZENKETA: Carouselaren ezker-eskuin botoien kokapena*/
  
  .carousel-control-next, .carousel-control-prev{
-    top:27rem!important;
+    top:13rem!important;
     width:5rem!important;
  }
 
