@@ -321,11 +321,11 @@ header.sticky-top{
  }
 
  .carousel-control-next{
-    right:calc(50vw - 4rem);
+    right:calc(50vw - 4rem)!important;
  }
  
  carousel-control-prev{
-    left:calc(50vw - 4rem);
+    left:calc(50vw - 4rem)!important;
  }
 
 /* 1. ZUZENKETA: Edukiontzi bakoitzari modalaren altuera finkoa eman (70px goiburua kenduta)
