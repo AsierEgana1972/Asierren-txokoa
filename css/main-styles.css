@@ -324,7 +324,7 @@ header.sticky-top{
     right:calc(50vw - 4rem)!important;
  }
  
- carousel-control-prev{
+ .carousel-control-prev{
     left:calc(50vw - 4rem)!important;
  }
 
