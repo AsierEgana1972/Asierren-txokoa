@@ -313,12 +313,28 @@ header.sticky-top{
   }
 
 
+ /*ZUZENKETA: Carouselaren ezker-eskuin botoien kokapena*/
+ 
+ .carousel-control-next, .carousel-control-prev{
+    top:27rem!important;
+    width:5rem!important;
+ }
+
+ .carousel-control-next{
+    right:calc(50vw - 4rem);
+ }
+ 
+ carousel-control-prev{
+    left:calc(50vw - 4rem);
+ }
+
 /* 1. ZUZENKETA: Edukiontzi bakoitzari modalaren altuera finkoa eman (70px goiburua kenduta)
      eta testu-lerroaren altuera berdindu zentratze bertikala indarrean jartzeko */
   .modal-body .carousel-inner,
   .modal-body .carousel-item {
     height: calc(100vh - 70px) !important;
-    line-height: calc(100vh - 70px) !important; /* Lerroaren altuerak irudia erdian finkatzen du */
+    line-height: 65vh !important; /*Lerroaren altuerak irudia erdian finkatzen du */
+    /*line-height: calc(100vh - 70px) !important;*/ /*Lerroaren altuerak irudia erdian finkatzen du */
     text-align: center !important;
     overflow: hidden !important;
   }
